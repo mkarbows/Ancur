@@ -14,14 +14,11 @@ This project will demonstrate one of the many possible applications that could b
 *Links to prior work at Arup:*
 [Blockchain technology](http://www.arup.com/blockchain)  
 *Links to external work and potential collaborators:*
+[Siacoin](https://sia.tech/), [Stampery](https://stampery.com/), [Ethereum/Solidity](https://www.ethereum.org/), [Dragonchain](https://dragonchain.com/), [BigchainDB](https://www.bigchaindb.com/)
 
 **Project Development**  
 *Method:*
-1. Research tools and API’s
-2. Implement API’s
-3. Brainstorm web application mockups
-4. Develop frontend  
-
+(1) Research tools and API’s (2) Implement API’s (3) Brainstorm web application mockups (4) Develop frontend  
 *Project Director:* Roland Martin  
 *Project Manager:* Megan Karbowski  
 *Team Members:* Lucas Gonzalez Garza Trent Clifton Angela Wilson Samantha Lustado  
@@ -39,6 +36,6 @@ Storing data on the blockchain could prove to be expensive and/or slow.
 
 **Supporting Material**  
 *Additional Information:*
-Potential tools/APIs to consider: Siacoin, Stampery, Ethereum/Solidity, Dragonchain  
+Potential tools/APIs to consider: Siacoin, Stampery, Ethereum/Solidity, Dragonchain, BigchainDB  
 *Request for line manager/director’s support sent to:*  
 *Comments sent to line manager/director regarding this application:*  
