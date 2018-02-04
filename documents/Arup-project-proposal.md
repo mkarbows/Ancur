@@ -14,7 +14,7 @@ This project will demonstrate one of the many possible applications that could b
 *Links to prior work at Arup:*
 [Blockchain technology](http://www.arup.com/blockchain)  
 *Links to external work and potential collaborators:*
-[Siacoin](https://sia.tech/), [Stampery](https://stampery.com/), [Ethereum/Solidity](https://www.ethereum.org/), [Dragonchain](https://dragonchain.com/), [BigchainDB](https://www.bigchaindb.com/)
+[Siacoin](https://sia.tech/), [Stampery](https://stampery.com/), [Ethereum/Solidity](https://www.ethereum.org/), [Dragonchain](https://dragonchain.com/), [BigchainDB](https://www.bigchaindb.com/), [Storj](https://storj.io/index.html)
 
 **Project Development**  
 *Method:*
@@ -36,6 +36,6 @@ Storing data on the blockchain could prove to be expensive and/or slow.
 
 **Supporting Material**  
 *Additional Information:*
-Potential tools/APIs to consider: Siacoin, Stampery, Ethereum/Solidity, Dragonchain, BigchainDB  
+Potential tools/APIs to consider: Siacoin, Stampery, Ethereum/Solidity, Dragonchain, BigchainDB, Storj  
 *Request for line manager/director’s support sent to:*  
 *Comments sent to line manager/director regarding this application:*  
