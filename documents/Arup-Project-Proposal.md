@@ -29,7 +29,7 @@ This project will demonstrate one of the many possible applications that could b
 
 **Project Output**  
 *Deliverables:*
-The deliverable will be a web application providing a secure and reliable place to verify documents.  
+The deliverable will be a web application providing a secure and reliable place to verify and store verifications of documents.  
 *Dissemination:*  
 *Risk:*
 Making transactions to the blockchain could prove to be expensive and/or slow.  
