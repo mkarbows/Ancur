@@ -1,4 +1,4 @@
-## Software Requirements Specification  
+## Ancur Software Requirements Specification  
 
 ### Table of Contents
 * 5.1 Introduction
@@ -6,26 +6,36 @@
 * 5.3 Performance Requirements
 * 5.4 Environment Requirements
 
-#### 5.1 Introduction  
-Anchor is a web application that allows users to view and validate documents on the blockchain.
+### 5.1 Introduction  
+Ancur is a web application that allows users to view and validate documents on the blockchain.
 This application utilizes the Stampery API to embed hashes of files and datasets into the Ethereum and Bitcoin blockchains.   
 The remainder of this document organizes the software requirements into three categories: functional, performance and environment. Functional requirements include specifications that the application is supposed to have. Performance requirements include the program's abilities in reference to performance. Environment requirements lists the software, hardware, and other resources needed for either the development or deployment or execution of the completed system.
 <!-- INSERT high level UML DIAGRAM  of the system components-->
 
-#### 5.2 Functional Requirements
+### 5.2 Functional Requirements    
+#### 5.2.1 New Validation  
+The program shall have a way for users to choose a document to validate.  
+##### 5.2.1.1 Return Receipt  
+The program will provide the user with a receipt for their validated document.  
+#### 5.2.2 View Previous Validation  
+The program shall have a way for users to view a previous validation.  
+#### 5.2.3 Document Storage  
+The program *might* allow users to store the validated documents.  
+#### 5.2.4 Stored Document Fetch  
+The program *might* allow users to view the validated documents that they stored.  
 
-5.2 The introduction to the functional section should describe the features that the completed system can be expected to have. It should describe what the completed system will do, but avoid describing how it will be accomplished. Implementation details will be included in another document, namely the SDD or DDD. The rest of this section will be divided into sub-sections, one for each of the functions of the system. For example, if your project uses the Model-View-Controller paradigm, there will be three functional requirement subsections, one for each of Model, View, and Controller.
-Each sub-subsection should reference a single discrete functional requirement. Each functional requirement should be given a meaningful name which describes the requirement. For example, if the first functional requirement is to provide a graphical user interface to the system, then the first subsection might be labeled
-A brief description of the functionality (1-2 paragraphs, as needed) would follow, then the actual requirements statements, in shall statement form, would follow that.
-A couple of things to note:
-All "shall" statements must be numbered.
-NO "will" or "should" statments should be numbered.
-ONLY one requirement in a requirements statement. This means, break things up into separate statements. If you see the word "and" you should consider that as (probably) two statements.
-"Will" and "should" statements MUST be associated with a requirement statement. The requirement statement should immediately precede the "will" or "should" statment in this case.
-There can be more than one "will" or "should" statment associated with any "shall" statement.
-When specifying performance requirements (see following), be careful about specifying ranges of performance measures. They may come back to bite you in the end.
-Try to write your requirements so they are testable statements.
-ALWAYS watch out for "weasel words"!
+### 5.3 Performance Requirements  
+#### 5.3.1 New Validation  
+5.3.1.1 Should be a button that opens a modal on click to choose a file on the user's device.  
+5.3.1.2 A simple "Ancur It" shall begin execution of the document validation.  
+5.3.1.3 A receipt should be returned automatically after the validation is completed.  
+#### 5.3.2 View Previous Validation  
+5.3.1.1 Should be a simple input field for a validated document's receipt.  
+5.3.1.2 A simple "Fetch It" shall begin execution of the finding the document's validation.  
+ 
+
+
+
 
 5.3 This section should describe any performance requirements that exist for the completed system. Each subsection should reference a performance requirement, and should be given a meaningful name which describes the requirement. For example, if the first performance requirement is to perform a search of a database and return the first record with 10 seconds of clock time, then the first subsection might be labeled
 Notice that the requirement says nothing about "clicking a button" or "selecting 'send' from a menu". The lack of such language in requirements reflects the focus of the document on what the application does, NOT on how it does it.
