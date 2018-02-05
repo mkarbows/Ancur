@@ -2,7 +2,7 @@ Invest in Arup application
 
 **Project Overview**  
 *Aim:*
-The aim of the project is to utilize blockchain technology to store data securely on a blockchain. The project would be centered around the storage of documents and a corresponding timestamp verification. The final deliverable will be a web application that allows users to upload documents to be verified and stored on the blockchain. The user will then be able to view the previously uploaded documents and the document’s corresponding verification. Additionally, the project will require research to determine the best tools and APIs to implement this application efficiently.  
+The aim of the project is to utilize blockchain technology to store data securely on a blockchain. The project is be centered around the storage of documents and a corresponding timestamp verification. The final deliverable will be a web application that allows users to upload documents to be verified and stored on the blockchain. The user will then be able to view the previously uploaded documents and the document’s corresponding verification. Additionally, the project will require research to determine the best tools and APIs to implement this application efficiently.  
 
 *Context:*
 The project is inspired by the exponential advancement of blockchain technologies within the past year. It would be ideal to work on this project because storing data on the blockchain is one of the most secure options available. The project would take advantage of the blockchain’s decentralized database. Additional security would be ensured due to the fact that transactions made to the blockchain are immutable once verified.  
