@@ -37,8 +37,8 @@ Ancur can be accessed on any any desktop or laptop computer with a web browser.
 Operating System | APIs | Platforms | Frameworks | Libraries
 --- | --- | --- | --- | ---
 MacOS | Stampery | *Dragonchain* | AngularJS | Bootstrap
---- | *BigchainDB* | --- | ---
---- | *Siacoin* | --- |---
- 
+ | *BigchainDB* |  |  |
+ | *Siacoin* |  |  |
+
 
 5.4 This section should list the software, hardware, and other resources needed for either the development or deployment or execution of the completed system. If any resource is unusual, provide a brief description of the resource, and a justification for using it. If a resource is not currently available, explain what steps will be taken to acquire it.
