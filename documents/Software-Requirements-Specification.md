@@ -13,15 +13,15 @@ The remainder of this document organizes the software requirements into three ca
 <!-- INSERT high level UML DIAGRAM  of the system components-->
 
 ### 5.2 Functional Requirements    
-#### 5.2.1 New Validation  
+#### 5.2.1 New Validation
 The program shall have a way for users to choose a document to validate.  
-##### 5.2.1.1 Return Receipt  
-The program will provide the user with a receipt for their validated document.  
-#### 5.2.2 View Previous Validation  
+##### 5.2.1.1 Return Receipt
+The program shall provide the user with a receipt for their validated document.  
+#### 5.2.2 View Previous Validation
 The program shall have a way for users to view a previous validation.  
-#### 5.2.3 Document Storage  
+#### 5.2.3 Document Storage
 The program *might* allow users to store the validated documents.  
-#### 5.2.4 Stored Document Fetch  
+#### 5.2.4 Stored Document Fetch
 The program *might* allow users to view the validated documents that they stored.  
 
 ### 5.3 Performance Requirements  
@@ -32,7 +32,7 @@ The program *might* allow users to view the validated documents that they stored
 #### 5.3.2 View Previous Validation  
 5.3.1.1 Should be a simple input field for a validated document's receipt.  
 5.3.1.2 A simple "Fetch It" shall begin execution of the finding the document's validation.  
- 
+
 
 
 
