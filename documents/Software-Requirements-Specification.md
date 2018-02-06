@@ -34,12 +34,12 @@ The Graphical User Interface (GUI) for the application provides the user with th
 #### 5.4.1 Hardware Requirements  
 Ancur can be accessed on any any desktop or laptop computer with a web browser.  
 #### 5.4.2 Software Requirements  
-Category | Requirement | Pretty
+Operating System | APIs | Platforms
 --- | --- | ---
-Operating System | MacOS | **nicely**
-APIs | Stampery | 3
- | *BigchainDB* | Pretty
- | *Siacoin* | ---
-Platforms | *Dragonchain* | **nicely**
+MacOS | Stampery | Dragonchain
+--- | BigchainDB | ---
+--- | Siacoin | ---
+--- | --- | ---
+--- | --- | ---
 1 | 2 | 3
 5.4 This section should list the software, hardware, and other resources needed for either the development or deployment or execution of the completed system. If any resource is unusual, provide a brief description of the resource, and a justification for using it. If a resource is not currently available, explain what steps will be taken to acquire it.
