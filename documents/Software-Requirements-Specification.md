@@ -12,8 +12,15 @@ This application utilizes the Stampery API to embed hashes of files and datasets
 The remainder of this document organizes the software requirements into three categories: functional, performance and environment. Functional requirements include specifications that the application is supposed to have. Performance requirements include the program's abilities in reference to performance. Environment requirements lists the software, hardware, and other resources needed for either the development or deployment or execution of the completed system.
 <!-- INSERT high level UML DIAGRAM  of the system components-->
 
-### 5.2 Functional Requirements    
-#### 5.2.1 New Validation
+### 5.2 Functional Requirements
+#### 5.2.1 Graphical User Interface  
+The Graphical User Interface (GUI) for the application provides the user with the ability to choose between the functionality available in the application.
+5.2.1.1 The GUI shall provide a way for users to choose a document to validate.
+⋅⋅⋅5.2.1.1.1 The GUI shall provide the user with a for their validated document.
+5.2.1.2 The GUI shall provide the users with a way to view a previous validation.
+5.2.1.3 The GUI *might* allow users to store the validated documents.
+5.2.1.4 The GUI *might* allow users to view the validated documents that they stored.
+<!-- #### 5.2.1 New Validation
 The program shall have a way for users to choose a document to validate.  
 ##### 5.2.1.1 Return Receipt
 The program shall provide the user with a receipt for their validated document.  
@@ -22,7 +29,7 @@ The program shall have a way for users to view a previous validation.
 #### 5.2.3 Document Storage
 The program *might* allow users to store the validated documents.  
 #### 5.2.4 Stored Document Fetch
-The program *might* allow users to view the validated documents that they stored.  
+The program *might* allow users to view the validated documents that they stored.   -->
 
 ### 5.3 Performance Requirements  
 #### 5.3.1 New Validation  
