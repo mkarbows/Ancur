@@ -11,7 +11,7 @@ Ancur is a web application that allows users to view and validate documents on t
 This application utilizes the Stampery API to embed hashes of files and datasets into the Ethereum and Bitcoin blockchains.   
 The remainder of this document organizes the software requirements into three categories: functional, performance and environment. Functional requirements include specifications that the application is supposed to have. Performance requirements include the program's abilities in reference to performance. Environment requirements lists the software, hardware, and other resources needed for either the development or deployment or execution of the completed system.  
 #### UML Diagram  
-![](/diagrams/ancur-uml-diagram.jpg)  
+![](/documents/diagrams/ancur-uml-diagram.jpg)  
 
 ### 5.2 Functional Requirements
 #### 5.2.1 Graphical User Interface  
