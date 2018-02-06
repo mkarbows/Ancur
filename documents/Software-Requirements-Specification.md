@@ -34,11 +34,12 @@ The Graphical User Interface (GUI) for the application provides the user with th
 #### 5.4.1 Hardware Requirements  
 Ancur can be accessed on any any desktop or laptop computer with a web browser.  
 #### 5.4.2 Software Requirements  
-Operating System | APIs | Platforms | Frameworks | Libraries
---- | --- | --- | --- | ---
-MacOS | Stampery | *Dragonchain* | AngularJS | Bootstrap
- | *BigchainDB* |  |  |
- | *Siacoin* |  |  |
+Operating System | APIs | Blockchains | Platforms | Frameworks | Libraries
+--- | --- | --- | --- | --- | ---
+MacOS | Stampery | Ethereum | *Dragonchain* | AngularJS | Bootstrap
+|  | *BigchainDB* | Bitcoin |  |
+|  | *Siacoin* |  |  |  |  
 
+The application will be written in JavaScript and will use the AngularJS framework for organization in addition to the Bootstrap library for styling. The application will use the Stampery API for most of its functionality. The Stampery API enables proof of existence, integrity and ownership of data by embedding hashes of files and datasets into the Ethereum and Bitcoin blockchains. The APIs that are *italicized* are still being researched and *might* be implemented.
 
 5.4 This section should list the software, hardware, and other resources needed for either the development or deployment or execution of the completed system. If any resource is unusual, provide a brief description of the resource, and a justification for using it. If a resource is not currently available, explain what steps will be taken to acquire it.
