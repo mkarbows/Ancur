@@ -3,6 +3,8 @@
  */
 const Stampery = require('stampery');
 
+// Authorization: Basic <base64(cientID + ':' + secret)>
+
 /**
 * Please replace this dummy user secret with a real one.
 * Sign up and get your own user secret at https://api-dashboard.stampery.com
