@@ -40,11 +40,12 @@ export const dbTestError = (data) => {
 }
 
 export const DB_TEST = "DB_TEST"
-export const dbTest = () => {
+// sending the file to dbTest to be sent to the api
+export const dbTest = (file) => {
     return dispatch => {
         dispatch(dbTestStart());
-        axios.get(`/api/products`)
-            .then(res => dispatch(dbTestResults(JSON.stringify(res.data))))
+        axios.get(`/api/products/` + file )
+            .then(res => dispatch(dbTestResults(res.data)))
             .catch(err => dispatch(dbTestError(err)))
 
     }
