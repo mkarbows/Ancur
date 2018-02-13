@@ -21,7 +21,7 @@ JBGE stands for Just Barely Good Enough, meaning you basically shouldn't write a
 The critical path is G -> D -> E -> M -> Q. The total expected length for the project is 32 working days.  
 
 ##### 3.4 Build a Gantt chart for the network you drew in Exercise 3. [Yes, I know, you weren't assigned that one — however, when you do Exercise 2 you should have enough information for this one.] Start on Wednesday, January 1, 2020, and don't work on weekends or the following holidays: New Year's Day, Martin Luther King Day, and President's Day.  
-![alt text](https://github.com/mkarbows/ArtChain/blob/master/hw-assignments/gantChart.png)  
+![alt text](https://github.com/mkarbows/Ancur/blob/master/hw-assignments/gantChart.png)  
 
 ##### 3.6 In addition to losing time from vacation and sick leave, projects can suffer from problems that just strike out of nowhere. Sort of a bad version of deus ex machina. For example, senior management could decide to switch your target platform from Windows desktop PSs to the latest smartwatch technology. Or a strike in the Far East could delay the shipment of your new servers. Or one of your developers might move to Iceland. How can you handle these sorts of completely unpredictable problems?  
 One way to handle the issue of "lost time" is to expand the time estimate for each task by some amount. Another way to deal with unpredictable problems would be to add some tasks to the project to specifically represent lost time and sick time. Problems like having supplies delayed, for example, can be avoided by planning and adding tasks to the schedule for approvals, order leads and setup of supplies.  
