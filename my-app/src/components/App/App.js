@@ -24,7 +24,7 @@ class App extends Component {
 
   enterReceipt() {
     let receipt = this.state.input;
-    console.log('receipt:', receipt);
+    // console.log('receipt:', receipt);
     // don't know if this is working and don't know if it is linked to actions index at all
     this.props.actions.proveReceipt(receipt);
   }

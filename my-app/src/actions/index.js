@@ -91,10 +91,12 @@ export const proveReceiptError = (data) => {
 export const PROVE_RECEIPT = "PROVE_RECEIPT";
 export const proveReceipt = (receipt) => {
   return dispatch => {
-    console.log(receipt);
+    // gets here
+    console.log('indexreceipt', receipt);
     dispatch(proveReceiptStart());
-    axios.get(`/api/products/` + receipt ) // passing in receipt might be working but don't know
-      .then(res => dispatch(proveReceiptResults(receipt)))
+    axios.get(`/api/products/` + receipt ) // passing in receipt might be working but don't know, changed this to res instead of res.database
+    // res = result
+      .then(res => dispatch(proveReceiptResults(res)))
       .catch(err => dispatch(proveReceiptError(err)))
 
   }

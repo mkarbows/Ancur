@@ -10,10 +10,10 @@ const demo = (state = initialState, action) => {
       return { ...state, results: "Test Succeeded!  " + action.data }
     case STAMP_DOC_RESULTS:
       // changed it to return the id that is returned by stampery after the document is stamped
-      return { ...state, results: "Test Succeeded!  " + action.data.id }
+      return { ...state, results: "Test Succeeded!  " + action.data.id + " " + action.data.token }
     case PROVE_RECEIPT_RESULTS:
-    // need to change this to return the correct thing
-      return { ...state, results: "Test Succeeded!  " + action.data }
+    // need to change this to return the correct thing.... this is still not giving me what i want exactly
+      return { ...state, results: "Test Succeeded!  " + action.data.data.id + " " + action.data.data.token }
     case EXPRESS_TEST_ERROR:
       return { ...state, results: "Test Failed!  " + action.data }
     case DB_TEST_ERROR:
