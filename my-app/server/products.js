@@ -39,10 +39,11 @@ router.get('/receipt/:receipt', function(req, res, next) {
     console.log('here',res);
     // res.status(200).send(res);
     if (res) {
-      // res.status(200).send(stampery.prove(res.receipts));
+      res.status(200).send(stampery.prove(res.receipts));
 
       // this works in the sense that the receipts is retrevied from the id that is put into the input - the id and token given by a file being "stamped" matches the id and token returned when the id is pasted into the input field
-      res.status(200).send(res.receipts)
+      // console.log("res.receipts", res.receipts);
+      // res.status(200).send(res)
     }
   });
 });
