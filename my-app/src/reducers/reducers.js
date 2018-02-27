@@ -15,8 +15,8 @@ const reducers = (state = initialState, action) => {
     case PROVE_RECEIPT_RESULTS:
     // need to change this to return the correct thing.... this is still not giving me what i want exactly
       return { ...state, results: "Test Succeeded!  " +
-      "proveReceipt id: " + action.data +
-      " prove token: " + action.data }
+      "proveReceipt btc: " + action.data.btc +
+      " prove eth: " + action.data.eth }
     case EXPRESS_TEST_ERROR:
       return { ...state, results: "Test Failed!  " + action.data }
     case DB_TEST_ERROR:

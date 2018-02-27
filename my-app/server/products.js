@@ -40,7 +40,7 @@ router.get('/:id', function(req, res, next) {
     // console.log('here',res);
     res.status(200).send(res);
     if (res) {
-      res.status(200).send(stampery.prove(res.receipts));
+      res.status(200).send(stampery.prove(res.data.receipts));
       // console.log("res.receipts", res.receipts);
       // res.status(200).send(res)
     }
