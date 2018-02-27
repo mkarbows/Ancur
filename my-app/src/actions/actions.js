@@ -94,7 +94,7 @@ export const proveReceipt = (id) => {
     dispatch(proveReceiptStart());
     axios.get(`/api/products/` + id ) // passing in receipt might be working but don't know, changed this to res instead of res.database
     // res = result
-      .then(res => dispatch(proveReceiptResults(id)))
+      .then(res => dispatch(proveReceiptResults(res.data.receipts)))
       .catch(err => dispatch(proveReceiptError(err)))
 
   }
