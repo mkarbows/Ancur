@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.stampingDocument = this.stampingDocument.bind(this);
-    this.enterReceipt = this.enterReceipt.bind(this);
+    this.enterId = this.enterId.bind(this);
   }
 
   handleChange(event) {
@@ -18,15 +18,13 @@ class App extends Component {
 
   stampingDocument(event) {
     // sending event.target.files[0] to dbTest to be stamped
+    console.log('event.target.files', event.target.files);
     this.props.actions.stampDoc(event.target.files[0]);
-    // this.props.actions.dbTest(event)
   }
 
-  enterReceipt() {
-    let receipt = this.state.input;
-    // console.log('receipt:', receipt);
-    // don't know if this is working and don't know if it is linked to actions index at all
-    this.props.actions.proveReceipt(receipt);
+  enterId() {
+    let id = this.state.input;
+    this.props.actions.proveReceipt(id);
   }
 
   render() {
@@ -48,9 +46,9 @@ class App extends Component {
         <br />
         <input type="text" onChange={ this.handleChange } />
         <input type="button"
-          onClick={ this.enterReceipt } value="Enter"/>
+          onClick={ this.enterId } value="Enter"/>
 
-        <div style={{ padding: '30px' }}>{this.props.results}</div>
+        <div style={{ padding: '30px' }}> { this.props.results } </div>
       </div>
     );
   }
