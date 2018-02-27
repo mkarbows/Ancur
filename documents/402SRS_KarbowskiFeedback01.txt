@@ -1,0 +1,46 @@
+Ancur Project SRS Evaluation
+============================
+
+Nice job on this, a great beginning.
+
+Some suggestions.
+
+When thinking of requirements, try to be even more specific about what
+you are specifying.  For a project of this magnitude and intent, you need
+a LOT more requirements, and a LOT more detail.  Whatever you are going
+to code up needs to be specified.  For example, it's not enough to say,
+"The GUI shall provide a way for users to choose a document to validate."
+Instead you should say, "The GUI shall provide a button for users to
+click to choose a document to validate."
+
+If something *might* happen, that belongs in a "should" or a "will"
+statement, which is associated with a "shall" statement.  For example,
+you state:
+
+5.2.1.3. The GUI might allow users to store the validated documents.
+
+Instead you should say:
+
+5.2.1.3. The GUI shall handle storage of any validated document.
+         Document storage should be implemented in a future release.
+         Document storage details will be deferred to a later phase.
+
+Notice that the should and will statements are NOT numbered and follow the
+"shall" statement with which they are associated.
+
+Having a document to specify something like this project that only has 5
+functional requirement statements is really not enough.
+
+These are "philosophy of requirements" issues that you can apply in a
+*general* way to nearly all the requirements in the document.  However,
+in the essence of time remaining, I'm assigning full credit to this
+deliverable, for both the initial and the final submissions.
+
+You don't have to do anything further with this document if you don't
+feel the need to do so.
+
+Deliverable D-02: 15% out of 15% = 100% which is an A-plus
+Deliverable D-05:  5% out of  5% = 100% which is an A-plus
+
+Keep up the good work!
+
