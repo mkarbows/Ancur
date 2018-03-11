@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-// import { Link } from 'react-router-dom';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
 
@@ -48,7 +47,9 @@ class App extends Component {
         <input type="button"
           onClick={ this.enterId } value="Enter"/>
 
-        <div style={{ padding: '30px' }}> { this.props.results } </div>
+        <div style={{ padding: '30px' }}>
+          { this.props.results }
+        </div>
       </div>
     );
   }
