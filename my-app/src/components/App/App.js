@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 import classnames from 'classnames';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
@@ -33,21 +35,22 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <br />
-        <br />
-        <input id="upload" ref="upload" type="file" accept="*"
-          onChange={ this.stampingDocument }
-          onClick={(event)=> {
-            event.target.value = null
-          }}
-        />
-        <br />
-        <br />
-        <input type="text" onChange={ this.handleChange } />
-        <input type="button"
-          onClick={ this.enterId } value="Enter"/>
+        <Row className="App-features">
+          <Col md={4} className="upload">
+            <input id="upload" ref="upload" type="file" accept="*"
+              onChange={ this.stampingDocument }
+              onClick={(event)=> {
+                event.target.value = null
+              }} />
+          </Col>
+          <Col md={4}>
+            <input type="text" onChange={ this.handleChange } />
+            <input type="button"
+              onClick={ this.enterId } value="Enter"/>
+          </Col>
+        </Row>
 
-        <div style={{ padding: '30px' }}>
+        <div >
           { this.props.results }
         </div>
       </div>
