@@ -38,43 +38,42 @@ Ancur uses the Stampery API to embed hashes associated with documents into the b
     * A demonstration of the application to the class.
 * Final Product Delivery and Presentation - *week 17*
     * Final report and code for the application are due.  
-    
+
 ### 4.2 Project Resources  
 #### 4.2.1 Hardware Resources
-**Development Machine**
-An Apple laptop is used for the development of the application with the following attributes;
+###### Development Machine  
+An Apple laptop is used for the development of the application with the following attributes:
 * MacBook Pro (13-inch, Late 2013)
 * 2.6 GHz Intel Core i5
-* 8 GB RAM  
+* 8 GB RAM - 2 GB minimum required for execution
 
-**Online Application Host**
+###### Online Application Host  
 A website will be the platform used for the application. This is where the features will be available to the users.
 * HTML 5 Support
 * Chrome, Safari, Firefox, Edge(Internet Explorer)  
 
 #### 4.2.2 Software Resources
-**Text Editor**
+###### Text Editor
 * Atom v1.23.3  
 
-**Interpreter and Executer**
+###### Interpreter and Executer
 * Node v8.9.4  
 
-**Version Control**
+###### Version Control
 * Git v2.11.0  
 
-**Third Party Software**
+###### Third Party Software
 * [Stampery API](https://stampery.com/)
 
-### 4.3 Project Organization
+###### Operating System
+* macOS Sierra v10.12.3  
 
+### 4.3 Project Organization
+#### Major Functionality of the Application:
+* 
 ### 4.4 Project Schedule
-* "Stamping" feature implementation  <!-- TODO -->
-    * Use the Stampery API
-    * Provide user with downloadable document including their stamped document's *id*, *token*, *receipts*,...
-* Prove stamped document feature implementation
-    * Use the Stampery API again
-    * Allow user to prove their document has been stamped using their stamped document's id.
-*
 #### 4.4.1 PERT / GANTT Chart
 #### 4.4.2 Task / Resource Table
-#### 4.4.3 Class Schedule
+#### 4.4.3 Class Schedule  
+* Class meets every Monday 4:20pm - 7:20pm
+* Full class schedule [here](http://bjohnson.lmu.build/cmsi402web/classnotes.html)
