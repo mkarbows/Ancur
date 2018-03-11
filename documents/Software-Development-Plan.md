@@ -2,15 +2,15 @@
 
 ### Table of Contents
 * 4.1 Plan Introduction
-* 4.1.1 Project Deliverables
+    * 4.1.1 Project Deliverables
 * 4.2 Project Resources
-* 4.2.1 Hardware Resources
-* 4.2.2 Software Resources
+    * 4.2.1 Hardware Resources
+    * 4.2.2 Software Resources
 * 4.3 Project Organization
 * 4.4 Project Schedule
-* 4.4.1 PERT / GANTT Chart
-* 4.4.2 Task / Resource Table
-* 4.4.3 Class Schedule
+    * 4.4.1 PERT / GANTT Chart
+    * 4.4.2 Task / Resource Table
+    * 4.4.3 Class Schedule
 
 ### 4.1 Plan Introduction  
 This Software Development Plan provides the detail of the planned development for the Ancur web application that provides an application allowing users to validate documents on the Bitcoin and Ethereum blockchains.  
@@ -18,7 +18,7 @@ This Software Development Plan provides the detail of the planned development fo
 Ancur uses the Stampery API to embed hashes associated with documents into the blockchain - the process is called *stamping*. This process provides the user with a *receipt* for the blockchain being used and each *receipt* has all the necessary data for proving the validity of the stamped document - *id*, *token*, *bitcoin receipt*, *ethereum receipt*, *timestamp*, *hash*, ... . Ancur is an application that utilizes blockchain technology to provide users with a secure way to validate their documents on the Bitcoin and Ethereum blockchains.
 
 #### 4.1.1 Project Deliverables  
-* Project Proposal - *week 2*
+##### Project Proposal - *week 2*
     * This document provides a description and justification of the application.
 * Initial Requirements Specification Document - *week 5*
     * This document specifies exactly what is going to and is being built. It is a contract between the customer and the solution provider.
@@ -70,7 +70,7 @@ A website will be the platform used for the application. This is where the featu
 
 ### 4.3 Project Organization
 #### Major Functionality of the Application:
-* 
+*
 ### 4.4 Project Schedule
 #### 4.4.1 PERT / GANTT Chart
 #### 4.4.2 Task / Resource Table
