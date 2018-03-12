@@ -19,7 +19,12 @@
   font-size: large;
 }
 
-.App-features {
-  justify-content: center;
-  text-align: center;
+.App-features.row {
+  /* width: 940px; */
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.upload {
+  text-align: -webkit-center;
 }

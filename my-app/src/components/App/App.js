@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
+import { Col, Row, Grid } from 'react-bootstrap';
+// import Col from 'react-bootstrap/lib/Col';
+
+// import 'bootstrap/dist/css/bootstrap.css';
 import classnames from 'classnames';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
@@ -31,19 +33,19 @@ class App extends Component {
   render() {
     const { className, ...props } = this.props;
     return (
-      <div className={classnames('App', className)} {...props}>
+      <Grid className={classnames('App', className)} {...props}>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <Row className="App-features">
-          <Col md={4} className="upload">
+          <Col md={6} className="upload">
             <input id="upload" ref="upload" type="file" accept="*"
               onChange={ this.stampingDocument }
               onClick={(event)=> {
                 event.target.value = null
               }} />
           </Col>
-          <Col md={4}>
+          <Col md={6} className="inputField">
             <input type="text" onChange={ this.handleChange } />
             <input type="button"
               onClick={ this.enterId } value="Enter"/>
@@ -53,7 +55,7 @@ class App extends Component {
         <div >
           { this.props.results }
         </div>
-      </div>
+      </Grid>
     );
   }
 }
