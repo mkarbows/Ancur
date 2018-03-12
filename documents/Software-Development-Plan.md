@@ -97,15 +97,12 @@ A website will be the platform used for the application. This is where the featu
 ![](/documents/diagrams/ancur-gantt-chart.png)
 
 #### 4.4.2 Task / Resource Table
-<!-- TODO -->
 | Task  | Resources |
 |-------|---------|
-| Create Testing Environment | Frontend Developer, Computer, OSRM Api, Node|
-| Build Algorithm | Backend Developer, Computer, OSRM, C++ |
-| Move to Swift (App Development) | App Developer, Computer, XCode |
-| Plug Mapping into App | Backend Developer and Integration, Computer, iPhone, XCode, OSRM Api  |
-| Alpha | Bug Fixers, Cleaning, biased feedback |
-| Beta | Strangers for unbiased testing and feedback, different iPhone models, bug fixing
+| Frontend | MacBook, Atom, React, Redux, Node, Chrome|
+| Design | MacBook, Atom, React, Bootstrap, Chrome |
+| API implementation | MacBook, Atom, Stampery API, Chrome |
+| Testing | MacBook, Atom, Chrome |
 
 #### 4.4.3 Class Schedule  
 * Class meets every Monday 4:20pm - 7:20pm
