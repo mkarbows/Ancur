@@ -70,7 +70,10 @@ A website will be the platform used for the application. This is where the featu
 
 ### 4.3 Project Organization
 #### Major Functionality of the Application:
-*
+* Frontend/UI design
+    * The design of the frontend has been very bare-bones so far, more design is planned for execution later.
+* Stamping feature
+    *
 ### 4.4 Project Schedule
 #### 4.4.1 PERT / GANTT Chart
 #### 4.4.2 Task / Resource Table
