@@ -27,6 +27,67 @@ e. the supermarket is open
 
 ##### 8.1 Suppose you've written an efficient IsRelativelyPrime method that takes two integers between -1 million and 1 million as parameters and returns true if they are relatively prime. Use either your favorite programming language or pseudocode (English that sort of looks like code) to write a method that tests the IsRelativelyPrime method. (Hint: You may find it useful to write another method that also tests two integers to see if they are relatively prime.)  
 <!-- TODO -->
+Method (written in pseudocode) to see if the two integers are relatively prime - more inefficient algorithm than original method:
+```
+testRelativelyPrime(integer1, integer2) {
+  //make sure ints are positive
+  integer1 = absoluteVal(integer1);
+  integer2 = absoluteVal(integer2);
+
+  //check if either ints are equal to 1 and return true
+  if ((int1 == 1) or (int2 == 2)) {
+    return true;
+  }
+
+  //check if either val is 0 and return false
+  if ((int1 == 0) or (int2 == 0)) {
+    return false;
+  }
+
+  //look for factors
+  smallerInt = minimum(int1, int2);
+  loop through ints, start at 2 {
+    if ((int1 % 2 == 0) && (b % 2 == 0)) {
+      return false;
+    }
+    return true;
+  }
+}
+```
+Now that I have this^ method, I can use it to test the original method `IsRelativelyPrime`:
+```
+for every 1,000 tries, pick int1 and int2 randomly then {
+  Assert IsRelativelyPrime(int1, int2) = testRelativelyPrime(int1, int2)
+}
+
+for every 1,000, pick int1 randomly then {
+  Assert IsRelativelyPrime(int1, int1) = testRelativelyPrime(int1, int1)
+}
+
+for every 1,000, pick int1 randomly then {
+  Assert IsRelativelyPrime(int1, 1) relatively prime
+  Assert IsRelativelyPrime(int1, -1) relatively prime
+  Assert IsRelativelyPrime(1, int1) relatively prime
+  Assert IsRelativelyPrime(-1, int1) relatively prime
+}
+
+for every 1,000, pick int1 randomly (not 1 or -1) then {
+  Assert IsRelativelyPrime(int1, 0) relatively prime
+  Assert IsRelativelyPrime(0, int1) relatively prime
+}
+
+for every 1,000, pick int1 randomly {
+  Assert IsRelativelyPrime(int1, -1,000,000) = testRelativelyPrime(int1, -1,000,000)
+  Assert IsRelativelyPrime(int1, -1,000,000) = testRelativelyPrime(int1, 1,000,000)
+  Assert IsRelativelyPrime(-1,000,000, int1) = testRelativelyPrime(-1,000,000, int1)
+  Assert IsRelativelyPrime(1,000,000, int1) = testRelativelyPrime(1,000,000, int1)
+  Assert IsRelativelyPrime(-1,000,000, -1,000,000) = testRelativelyPrime(-1,000,000, -1,000,000)
+  Assert IsRelativelyPrime(1,000,000, 1,000,000) = testRelativelyPrime(1,000,000, 1,000,000)
+  Assert IsRelativelyPrime(-1,000,000, 1,000,000) = testRelativelyPrime(-1,000,000, 1,000,000)
+  Assert IsRelativelyPrime(1,000,000, -1,000,000) = testRelativelyPrime(1,000,000, -1,000,000)
+}
+```
+
 
 ##### 8.3 What testing techniques did you use to write the test method in Exercise 1? (Exhaustive, black-box, white-box, or gray-box?) Which ones could you use and under what circumstances? [Please justify your answer with a short paragraph to explain.]  
 <!-- TODO -->
