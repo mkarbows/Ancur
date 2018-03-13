@@ -26,7 +26,6 @@ d. there are empty parking spaces in the parking lot
 e. the supermarket is open  
 
 ##### 8.1 Suppose you've written an efficient IsRelativelyPrime method that takes two integers between -1 million and 1 million as parameters and returns true if they are relatively prime. Use either your favorite programming language or pseudocode (English that sort of looks like code) to write a method that tests the IsRelativelyPrime method. (Hint: You may find it useful to write another method that also tests two integers to see if they are relatively prime.)  
-<!-- TODO -->
 Method (written in pseudocode) to see if the two integers are relatively prime - more inefficient algorithm than original method:
 ```
 testRelativelyPrime(integer1, integer2) {
@@ -88,12 +87,11 @@ for every 1,000, pick int1 randomly {
 }
 ```
 
-
 ##### 8.3 What testing techniques did you use to write the test method in Exercise 1? (Exhaustive, black-box, white-box, or gray-box?) Which ones could you use and under what circumstances? [Please justify your answer with a short paragraph to explain.]  
-<!-- TODO -->
+I used black-box because there is no statement on how the method, IsRelativelyPrime, works. Exhaustive testing wouldn't have worked well because our large range of values. White-box and gray-box testing would have worked if we knew how the IsRelativelyPrime method works.
 
 ##### 8.5 Now that you know how the method works, implement it and your testing code in your favorite programming language. Did you find any bugs in your initial version of the method or in the testing code? Did you get any benefit from the testing code?  
-<!-- TODO -->
+I realized that restrictions for the values of the two integers need to be implemented in IsRelativelyPrime because the method wasn't able to handle the max and min values of the integers.
 
 ##### 8.9 Exhaustive testing actually falls into one to the categories black-box, white-box, or gray-box. Which one is it and why?  
 Exhaustive tests are black-box tests because they don't rely on knowledge of what's going on inside the method they are testing  
