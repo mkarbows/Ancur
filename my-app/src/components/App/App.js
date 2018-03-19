@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Col, Row, Grid } from 'react-bootstrap';
-// import Col from 'react-bootstrap/lib/Col';
 
 // import 'bootstrap/dist/css/bootstrap.css';
 import classnames from 'classnames';
@@ -49,6 +48,7 @@ class App extends Component {
             <input type="text" onChange={ this.handleChange } />
             <input type="button"
               onClick={ this.enterId } value="Enter"/>
+
           </Col>
         </Row>
 
