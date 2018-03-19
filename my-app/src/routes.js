@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './containers/AppContainer';
-import About from './components/About/About';
+import Stamp from './containers/stampContainer'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ const Routes = () => {
     <Router>
       <div>
         <Route exact path="/" component={App} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/" component={Stamp} />
       </div>
     </Router>
   )

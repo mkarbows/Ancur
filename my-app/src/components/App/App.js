@@ -5,6 +5,7 @@ import { Col, Row, Grid } from 'react-bootstrap';
 import classnames from 'classnames';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
+import Stamp from '../stamp/stamp.js';
 
 class App extends Component {
   constructor(props) {
@@ -38,11 +39,7 @@ class App extends Component {
         </div>
         <Row className="App-features">
           <Col md={6} className="upload">
-            <input id="upload" ref="upload" type="file" accept="*"
-              onChange={ this.stampingDocument }
-              onClick={(event)=> {
-                event.target.value = null
-              }} />
+            <Stamp />
           </Col>
           <Col md={6} className="inputField">
             <input type="text" onChange={ this.handleChange } />
