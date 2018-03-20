@@ -24,6 +24,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "sequelize": "^4.33.2",
+    "stampery": "^6.1.0",
     "yargs": "^11.0.0"
   },
   "scripts": {

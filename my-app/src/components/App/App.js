@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Col, Row, Grid } from 'react-bootstrap';
-
+import { Col, Row } from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.css';
 import classnames from 'classnames';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
-import Stamp from '../stamp/stamp.js';
 
 class App extends Component {
   constructor(props) {
@@ -33,26 +31,29 @@ class App extends Component {
   render() {
     const { className, ...props } = this.props;
     return (
-      <Grid className={classnames('App', className)} {...props}>
+      <div className={classnames('App', className)} {...props}>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <Row className="App-features">
-          <Col md={6} className="upload">
-            <Stamp />
+          <Col md={4} className="upload">
+            <input id="upload" ref="upload" type="file" accept="*"
+              onChange={ this.stampingDocument }
+              onClick={(event)=> {
+                event.target.value = null
+              }} />
           </Col>
-          <Col md={6} className="inputField">
+          <Col md={4}>
             <input type="text" onChange={ this.handleChange } />
             <input type="button"
               onClick={ this.enterId } value="Enter"/>
-
           </Col>
         </Row>
 
         <div >
           { this.props.results }
         </div>
-      </Grid>
+      </div>
     );
   }
 }
