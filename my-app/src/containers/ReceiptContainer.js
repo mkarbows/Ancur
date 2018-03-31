@@ -2,7 +2,7 @@ import * as Actions from '../actions/actions.js'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 
-import Stamp from '../components/Stamp/Stamp.js'
+import Receipt from '../components/Receipt/Receipt.js'
 
 function mapStateToProps(state) {
   return {
@@ -16,4 +16,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Stamp);
+export default connect(mapStateToProps, mapDispatchToProps)(Receipt);

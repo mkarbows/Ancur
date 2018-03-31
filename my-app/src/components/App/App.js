@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { Col, Row } from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.css';
 // import classnames from 'classnames';
-import Stamp from '../../containers/stampContainer';
+import Stamp from '../../containers/StampContainer';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
 
