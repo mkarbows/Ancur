@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import classnames from 'classnames';
 import { Button } from 'react-bootstrap';
 
 class Stamp extends Component {
@@ -13,15 +12,12 @@ class Stamp extends Component {
   }
 
   getInput(event) {
-    // console.log( event.target.files);
     this.setState({
       document: event.target.files[0]
     });
-    // this.state.document = event.target.files[0];
   }
 
   stampingDocument(event) {
-    // console.log(this.state.document);
     this.props.actions.stampDoc(this.state.document);
   }
 

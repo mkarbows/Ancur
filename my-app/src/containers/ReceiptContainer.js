@@ -6,7 +6,7 @@ import Receipt from '../components/Receipt/Receipt.js'
 
 function mapStateToProps(state) {
   return {
-    results: state.reducers.results
+    receiptResults: state.reducers.receiptResults
   }
 }
 

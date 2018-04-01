@@ -74,27 +74,26 @@ export const stampDoc = (input) => {
   }
 }
 
-// export const PROVE_RECEIPT_START = "PROVE_RECEIPT_START";
-// export const proveReceiptStart = () => {
-//   return { type: PROVE_RECEIPT_START }
-// }
-// export const PROVE_RECEIPT_RESULTS = "PROVE_RECEIPT_RESULTS";
-// export const proveReceiptResults = (data) => {
-//   return { type: PROVE_RECEIPT_RESULTS, data }
-// }
-// export const PROVE_RECEIPT_ERROR = "PROVE_RECEIPT_ERROR";
-// export const proveReceiptError = (data) => {
-//   return { type: PROVE_RECEIPT_ERROR, data }
-// }
-//
-// export const PROVE_RECEIPT = "PROVE_RECEIPT";
-// export const proveReceipt = (id) => {
-//   return dispatch => {
-//     dispatch(proveReceiptStart());
-//     axios.get(`/api/callReceiptMethod/` + id ) // passing in receipt might be working but don't know, changed this to res instead of res.database
-//     // res = result
-//       .then(res => dispatch(proveReceiptResults(res.data.receipts)))
-//       .catch(err => dispatch(proveReceiptError(err)))
-//
-//   }
-// }
+export const PROVE_RECEIPT_START = "PROVE_RECEIPT_START";
+export const proveReceiptStart = () => {
+  return { type: PROVE_RECEIPT_START }
+}
+export const PROVE_RECEIPT_RESULTS = "PROVE_RECEIPT_RESULTS";
+export const proveReceiptResults = (data) => {
+  return { type: PROVE_RECEIPT_RESULTS, data }
+}
+export const PROVE_RECEIPT_ERROR = "PROVE_RECEIPT_ERROR";
+export const proveReceiptError = (data) => {
+  return { type: PROVE_RECEIPT_ERROR, data }
+}
+
+export const PROVE_RECEIPT = "PROVE_RECEIPT";
+export const proveReceipt = (id) => {
+  return dispatch => {
+    dispatch(proveReceiptStart());
+    axios.get(`/api/callReceiptMethod/` + id ) 
+      .then(res => dispatch(proveReceiptResults(res)))
+      .catch(err => dispatch(proveReceiptError(err)))
+
+  }
+}
