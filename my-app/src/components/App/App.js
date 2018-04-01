@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-// import { Col, Row } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.css';
-// import classnames from 'classnames';
+import { Grid, Col, Row } from 'react-bootstrap';
+
 import Stamp from '../../containers/StampContainer';
+import Receipt from '../../containers/ReceiptContainer';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   // constructor(props) {
@@ -14,20 +15,12 @@ class App extends Component {
     // this.enterId = this.enterId.bind(this);
   // }
 
-  // handleChange(event) {
-    // this.setState({ input: event.target.value });
-  // }
-
   // stampingDocument(event) {
     // sending event.target.files[0] to dbTest to be stamped
     // console.log('event.target.files', event.target.files);
     // this.props.actions.stampDoc(event.target.files[0]);
   // }
 
-  // enterId() {
-    // let id = this.state.input;
-    // this.props.actions.proveReceipt(id);
-  // }
 
   render() {
     // <Row className="App-features">
@@ -52,11 +45,17 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
 
-        <Stamp />
+        <Grid >
+          <Row >
+            <Col md={6}>
+              <Stamp />
+            </Col>
+            <Col md={6}>
+              <Receipt />
+            </Col>
+          </Row>
+        </Grid>
 
-        <div >
-          { this.props.results }
-        </div>
       </div>
     );
   }

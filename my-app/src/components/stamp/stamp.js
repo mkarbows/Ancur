@@ -1,44 +1,37 @@
 import React, { Component } from 'react';
 // import classnames from 'classnames';
-// import { stampDoc } from '../actions/actions.js'
 import { Button } from 'react-bootstrap';
 
 class Stamp extends Component {
   constructor(props) {
     super(props);
-  //   this.stampingDocument = this.stampingDocument.bind(this);
-    this.clickFunctions = this.clickFunctions.bind(this);
+    this.state = {
+      document: null
+    };
+    this.getInput = this.getInput.bind(this);
+    this.stampingDocument = this.stampingDocument.bind(this);
   }
 
-  // stampingDocument(event) {
-  //   this.props.actions.stampDoc(event.target.files[0]);
-  // }
-  clickFunctions(test) {
-    console.log('clicked');
-    // console.log(this.props.actions);
-    this.props.actions.stampDoc("test");
+  getInput(event) {
+    // console.log( event.target.files);
+    this.state.document = event.target.files[0];
+  }
+
+  stampingDocument(event) {
+    // console.log(this.state.document);
+    this.props.actions.stampDoc(this.state.document);
   }
 
   render() {
-    // <div className={classnames('Stamp', className)} {...props}>
-    //   <input id="upload" ref="upload" type="file" accept="*"
-    //     onChange={ this.stampingDocument }
-    //     onClick={(event)=> {
-    //       event.target.value = null}} />
-    //   <div>
-    //     { this.props.results }
-    //   </div>
-    // </div>
 
-    const { ...props } = this.props;
     return (
       <div>
-        <Button bsStyle="info" onClick={this.clickFunctions}> test </Button>
+        <input type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={this.getInput} />
+        <Button bsStyle="info" onClick={ this.stampingDocument }> stamp this! </Button>
         <div>
-          { this.props.results }
+          {this.props.results}
         </div>
       </div>
-
     );
   }
 
