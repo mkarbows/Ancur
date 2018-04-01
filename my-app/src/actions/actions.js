@@ -67,7 +67,7 @@ export const STAMP_DOC = "STAMP_DOC";
 export const stampDoc = (input) => {
   return dispatch => {
     dispatch(stampDocStart());
-    axios.get(`/api/products/` + input)
+    axios.get(`/api/callStampMethod/` + input)
       .then(res => dispatch(stampDocResults(res)))
       .catch(err => dispatch(stampDocError(err)))
 
@@ -91,7 +91,7 @@ export const stampDoc = (input) => {
 // export const proveReceipt = (id) => {
 //   return dispatch => {
 //     dispatch(proveReceiptStart());
-//     axios.get(`/api/products/` + id ) // passing in receipt might be working but don't know, changed this to res instead of res.database
+//     axios.get(`/api/callReceiptMethod/` + id ) // passing in receipt might be working but don't know, changed this to res instead of res.database
 //     // res = result
 //       .then(res => dispatch(proveReceiptResults(res.data.receipts)))
 //       .catch(err => dispatch(proveReceiptError(err)))

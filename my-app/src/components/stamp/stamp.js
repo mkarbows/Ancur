@@ -14,7 +14,10 @@ class Stamp extends Component {
 
   getInput(event) {
     // console.log( event.target.files);
-    this.state.document = event.target.files[0];
+    this.setState({
+      document: event.target.files[0]
+    });
+    // this.state.document = event.target.files[0];
   }
 
   stampingDocument(event) {
@@ -29,7 +32,7 @@ class Stamp extends Component {
         <input type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={this.getInput} />
         <Button bsStyle="info" onClick={ this.stampingDocument }> stamp this! </Button>
         <div>
-          {this.props.results}
+          { this.props.results }
         </div>
       </div>
     );
