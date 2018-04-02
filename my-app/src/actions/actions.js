@@ -91,8 +91,8 @@ export const PROVE_RECEIPT = "PROVE_RECEIPT";
 export const proveReceipt = (id) => {
   return dispatch => {
     dispatch(proveReceiptStart());
-    axios.get(`/api/callReceiptMethod/` + id ) 
-      .then(res => dispatch(proveReceiptResults(res)))
+    axios.get(`/api/callReceiptMethod/` + id )
+      .then(res => dispatch(proveReceiptResults(res.data)))
       .catch(err => dispatch(proveReceiptError(err)))
 
   }
