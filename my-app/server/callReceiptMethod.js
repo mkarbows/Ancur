@@ -15,7 +15,8 @@ router.get('/:id', function(req, res, next) {
     // if (validity) {
     //   res.status(200).send("This works");
     // }
-    res.status(200).send(stampery.prove(stamp[0].receipts.btc));
+    res.status(200).send(stamp[0].receipts.btc);
+    // res.status(200).send(stampery.prove(stamp[0].receipts.btc));
     // res.status(200).send(stamp);
      // return console.log('Valid: ', stampery.prove(stamp.receipts));
   }).catch((err) => {
