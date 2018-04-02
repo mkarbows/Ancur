@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Well } from 'react-bootstrap';
+import './Stamp.css';
 
 class Stamp extends Component {
   constructor(props) {
@@ -24,8 +25,11 @@ class Stamp extends Component {
   render() {
 
     return (
-      <div>
-        <input type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={this.getInput} />
+      <div className="stampComponent">
+        <Well>
+          <input className="fileInput" type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={this.getInput} />
+        </Well>
+
         <Button bsStyle="info" onClick={ this.stampingDocument }> stamp this! </Button>
         <div>
           { this.props.results }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Well } from 'react-bootstrap';
+import './Receipt.css';
+
 
 class Receipt extends Component {
   constructor(props) {
@@ -25,10 +27,11 @@ class Receipt extends Component {
 
   render() {
     return (
-      <div>
-        <h4>receipt </h4>
-        <input type="text" placeholder="Enter Id" onChange={ this.handleChange }></input>
-        <Button onClick={ this.enterId }> get receipts! </Button>
+      <div className="receiptComponent">
+        <Well>
+          <input className="idInput" type="text" placeholder="Enter Id" onChange={ this.handleChange }></input>
+        </Well>
+        <Button className="idButton" bsStyle="success" onClick={ this.enterId }> get receipts! </Button>
         <div>
           { this.props.receiptResults }
         </div>
