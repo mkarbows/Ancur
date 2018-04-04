@@ -15,11 +15,11 @@ router.get('/:id', function(req, res, next) {
     // if (validity) {
     //   res.status(200).send("This works");
     // }
-    console.log(stamp[0].receipts.eth);
-    res.status(200).send(stamp[0].receipts.eth);
+    // console.log(stamp[0].receipts.eth);
+    // res.status(200).send(stamp[0].receipts.eth);
     // res.send(req.params.id + ".pdf");
     // res.status(200).send(stamp[0].receipts.btc);
-    // res.status(200).send(stampery.prove(stamp[0].receipts.btc));
+    res.status(200).send(stampery.prove(stamp[0].receipts.btc));
     // res.status(200).send(stamp);
      // return console.log('Valid: ', stampery.prove(stamp.receipts));
   }).catch((err) => {

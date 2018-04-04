@@ -11,6 +11,7 @@ class Receipt extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.enterId = this.enterId.bind(this);
+    // this.displayResults = this.displayResults.bind(this);
   }
 
   handleChange(event) {
@@ -20,22 +21,26 @@ class Receipt extends Component {
   }
 
   enterId() {
-      let id = this.state.id;
-      console.log(id);
-      this.props.actions.proveReceipt(id);
-    }
+    let id = this.state.id;
+    console.log(id);
+    this.props.actions.proveReceipt(id);
+  }
+
+  // displayResults() {
+  //   return ( <Well className='receiptWell' > { this.props.ethReceipt }</Well>)
+  // }
 
   render() {
     // console.log(this.props.ethReceipt);
+    // { this.displayResults() }
     return (
       <div className="receiptComponent">
-        <Well>
+        <Well className='idInputWell'>
           <input className="idInput" type="text" placeholder="Enter Id" onChange={ this.handleChange }></input>
         </Well>
         <Button className="idButton" bsStyle="success" onClick={ this.enterId }> get receipts! </Button>
         <div>
-          { this.props.receiptResults }
-          <p>{ this.props.ethReceipt }</p>
+          { this.props.isValid }
         </div>
       </div>
     );

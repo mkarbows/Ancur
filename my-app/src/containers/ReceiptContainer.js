@@ -7,7 +7,9 @@ import Receipt from '../components/Receipt/Receipt.js'
 function mapStateToProps(state) {
   return {
     receiptResults: state.reducers.receiptResults,
-    ethReceipt: state.reducers.ethReceipt
+    ethReceipt: state.reducers.ethReceipt,
+    btcReceipt: state.reducers.btcReceipt,
+    isValid: state.reducers.isValid
   }
 }
 

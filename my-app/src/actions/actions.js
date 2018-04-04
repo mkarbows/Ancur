@@ -86,13 +86,13 @@ export const PROVE_RECEIPT_ERROR = "PROVE_RECEIPT_ERROR";
 export const proveReceiptError = (data) => {
   return { type: PROVE_RECEIPT_ERROR, data }
 }
-
+// JSON.stringify(res.data)
 export const PROVE_RECEIPT = "PROVE_RECEIPT";
 export const proveReceipt = (id) => {
   return dispatch => {
     dispatch(proveReceiptStart());
     axios.get(`/api/callReceiptMethod/` + id )
-      .then(res => dispatch(proveReceiptResults(JSON.stringify(res.data))))
+      .then(res => dispatch(proveReceiptResults(res.data)))
       .catch(err => dispatch(proveReceiptError(err)))
 
   }
