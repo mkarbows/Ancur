@@ -101,7 +101,7 @@ A website will be the platform used for the application. This is where the featu
 |-------|---------|
 | Frontend | MacBook, Atom, React, Redux, Node, Chrome|
 | Design | MacBook, Atom, React, Bootstrap, Chrome |
-| API implementation | MacBook, Atom, Stampery API, Chrome |
+| API implementation | MacBook, Atom, Stampery API, Axios, Chrome |
 | Testing | MacBook, Atom, Chrome |
 
 #### 4.4.3 Class Schedule  
