@@ -92,7 +92,7 @@ export const proveReceipt = (id) => {
   return dispatch => {
     dispatch(proveReceiptStart());
     axios.get(`/api/callReceiptMethod/` + id )
-      .then(res => dispatch(proveReceiptResults(res.data)))
+      .then(res => dispatch(proveReceiptResults(JSON.stringify(res.data))))
       .catch(err => dispatch(proveReceiptError(err)))
 
   }

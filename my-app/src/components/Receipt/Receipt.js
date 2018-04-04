@@ -26,6 +26,7 @@ class Receipt extends Component {
     }
 
   render() {
+    // console.log(this.props.ethReceipt);
     return (
       <div className="receiptComponent">
         <Well>
@@ -34,6 +35,7 @@ class Receipt extends Component {
         <Button className="idButton" bsStyle="success" onClick={ this.enterId }> get receipts! </Button>
         <div>
           { this.props.receiptResults }
+          <p>{ this.props.ethReceipt }</p>
         </div>
       </div>
     );
