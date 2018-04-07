@@ -26,7 +26,7 @@ class Stamp extends Component {
 
     return (
       <div className="stampComponent">
-        <Well>
+        <Well className="stampInputWell">
           <input className="fileInput" type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={this.getInput} />
         </Well>
 

@@ -7,7 +7,8 @@ class Receipt extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: ''
+      id: '',
+      // wellOpen: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.enterId = this.enterId.bind(this);
