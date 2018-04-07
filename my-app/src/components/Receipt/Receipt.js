@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Well } from 'react-bootstrap';
+import { BtcEth } from '../../containers/BtcEthContainer';
+import { Button, Well, Tab, Row, Col, Nav, NavItem, Panel } from 'react-bootstrap';
 import './Receipt.css';
 
 
@@ -8,7 +9,7 @@ class Receipt extends Component {
     super(props);
     this.state = {
       id: '',
-      // wellOpen: false
+      open: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.enterId = this.enterId.bind(this);
@@ -25,6 +26,9 @@ class Receipt extends Component {
     let id = this.state.id;
     console.log(id);
     this.props.actions.proveReceipt(id);
+    this.props.actions.getReceipts(id);
+    console.log(this.props.proveReceiptResults);
+    // this.setState({ open: !this.state.open });
   }
 
   // displayResults() {
@@ -40,9 +44,38 @@ class Receipt extends Component {
           <input className="idInput" type="text" placeholder="Enter Id" onChange={ this.handleChange }></input>
         </Well>
         <Button className="idButton" bsStyle="success" onClick={ this.enterId }> get receipts! </Button>
-        <div>
+
+        <Panel id="collapsible-panel-example-1" expanded={this.state.open} onToggle>
+          <Panel.Collapse>
+            <Panel.Body>
+              yo
+            </Panel.Body>
+          </Panel.Collapse>
+        </Panel>
+
+        <Well>
           { this.props.isValid }
-        </div>
+        </Well>
+
+        <BtcEth />
+
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <Row className="clearfix">
+            <Col sm={4}>
+              <Nav bsStyle="pills" stacked>
+                <NavItem eventKey="first">BTC Receipt</NavItem>
+                <NavItem eventKey="second">ETH Receipt</NavItem>
+              </Nav>
+            </Col>
+            <Col sm={8}>
+              <Tab.Content animation>
+                <Tab.Pane eventKey="first">{ this.props.btcReceipt }</Tab.Pane>
+                <Tab.Pane eventKey="second">{ this.props.ethReceipt }</Tab.Pane>
+              </Tab.Content>
+            </Col>
+          </Row>
+        </Tab.Container>
+
       </div>
     );
   }

@@ -8,6 +8,7 @@ router.get('/:id', function(req, res, next) {
   // console.log(req.params.id);
   stampery.getById(req.params.id).then((stamp) => {
     console.log(stamp[0].receipts.btc);
+    res.status(200).send(stamp[0]);
     // res.status(200).send(stamp[0].receipts.eth);
     // res.status(200).send(stamp[0].receipts.btc);
   }).catch((err) => {

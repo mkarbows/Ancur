@@ -9,7 +9,7 @@ router.get('/:id', function(req, res, next) {
   console.log(req.params.id);
 
   stampery.getById(req.params.id).then((stamp) => {
-    console.log(stamp[0].receipts.btc);
+    // console.log(stamp[0].receipts.btc);
     // let validity = stampery.prove(stamp[0].receipts.btc);
     // console.log(validity);
     // if (validity) {
