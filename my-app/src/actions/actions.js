@@ -97,3 +97,27 @@ export const proveReceipt = (id) => {
 
   }
 }
+
+export const GET_RECEIPT_START = "GET_RECEIPT_START";
+export const getReceiptStart = () => {
+  return { type: GET_RECEIPT_START }
+}
+export const GET_RECEIPT_RESULTS = "GET_RECEIPT_RESULTS";
+export const getReceiptResults = (data) => {
+  return { type: GET_RECEIPT_RESULTS, data }
+}
+export const GET_RECEIPT_ERROR = "GET_RECEIPT_ERROR";
+export const getReceiptError = (data) => {
+  return { type: GET_RECEIPT_ERROR, data }
+}
+// JSON.stringify(res.data)
+export const GET_RECEIPT = "GET_RECEIPT";
+export const getReceipt = (id) => {
+  return dispatch => {
+    dispatch(getReceiptStart());
+    axios.get(`/api/getReceipt/` + id )
+      .then(res => dispatch(getReceiptResults(res.data)))
+      .catch(err => dispatch(getReceiptError(err)))
+
+  }
+}
