@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Col, Row } from 'react-bootstrap';
 import Stamp from '../../containers/StampContainer';
 import Receipt from '../../containers/ReceiptContainer';
+// import BtcEth from '../../containers/BtcEthContainer';
 import logo from '../../images/ancur-logo.png';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css';
