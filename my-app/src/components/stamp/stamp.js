@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Well } from 'react-bootstrap';
+import { Button, Well, Row, Panel, Label } from 'react-bootstrap';
 import './Stamp.css';
 
 class Stamp extends Component {
@@ -8,7 +8,9 @@ class Stamp extends Component {
     this.state = {
       documentSize: null,
       documentName: null,
-      lastModified: null
+      lastModified: null,
+      open: false,
+      isLoading: false
     };
     this.getInput = this.getInput.bind(this);
     this.stampingDocument = this.stampingDocument.bind(this);
@@ -20,29 +22,55 @@ class Stamp extends Component {
       documentName: event.target.files[0].name,
       lastModified: event.target.files[0].lastModified
     });
-    // console.log(this.state.document);
   }
 
   stampingDocument(event) {
-    // console.log(this.state.documentSize);
-    // console.log(this.state.documentName);
-    // console.log(this.state.lastModified);
+    this.setState({
+      isLoading: true
+    });
 
     this.props.actions.stampDoc(this.state.documentSize + this.state.documentName + this.state.lastModified);
+
+    setTimeout(() => {
+      this.setState({ isLoading: false, open: !this.state.open });
+    }, 2000);
   }
 
   render() {
-
+    const { isLoading } = this.state;
     return (
       <div className="stampComponent">
         <Well className="stampInputWell">
           <input className="fileInput" type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={ this.getInput } />
-        </Well>
 
-        <Button bsStyle="info" onClick={ this.stampingDocument }> stamp this! </Button>
-        <div>
-          { this.props.results }
-        </div>
+          <Button bsStyle="info" className="stampButton" disabled={isLoading}
+          onClick={!isLoading ? this.stampingDocument : null}> stamp this! </Button>
+        </Well>
+        <Panel id="collapsible-panel-example-1" expanded={ this.state.open } onToggle>
+          <Panel.Collapse>
+            <Panel.Body>
+              <Row>
+                <Label>Stamp Id:</Label>{" "+ this.props.newStampId }
+              </Row>
+              <Row>
+                <Label>Stamp Hash:</Label>{" "+ this.props.newStampHash }
+              </Row>
+              <Row>
+                <Label>Stamp Token:</Label>{" "+ this.props.newStampToken }
+              </Row>
+              <Row>
+                <Label>Time:</Label>{" "+ this.props.newStampTime }
+              </Row>
+              <Row>
+                <Label>Estimated BTC Time:</Label>{" "+ this.props.newStampBtcTime + " seconds" }
+              </Row>
+              <Row>
+                <Label>Estimated ETH Time:</Label>{" "+ this.props.newStampEthTime + " seconds" }
+              </Row>
+            </Panel.Body>
+          </Panel.Collapse>
+        </Panel>
+
       </div>
     );
   }

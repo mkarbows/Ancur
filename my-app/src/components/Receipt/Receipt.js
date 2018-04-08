@@ -13,8 +13,6 @@ class Receipt extends Component {
     };
     this.handleIdInput = this.handleIdInput.bind(this);
     this.proveId = this.proveId.bind(this);
-    // this.displayResults = this.displayResults.bind(this);
-    // this.handleDisplay = this.handleDisplay.bind(this);
   }
 
   handleIdInput(event) {
@@ -35,12 +33,6 @@ class Receipt extends Component {
       this.setState({ isLoading: false, open: !this.state.open });
     }, 2000);
 
-    // this.setState({
-    //   open: !this.state.open
-    // });
-    // if(this.props.isValid !== '') {
-    //   this.setState({ open: !this.state.open });
-    // }
   }
 
 
@@ -50,10 +42,10 @@ class Receipt extends Component {
       <div className="receiptComponent">
         <Well className='idInputWell'>
           <input className="idInput" type="text" placeholder="Enter Id" onChange={ this.handleIdInput }></input>
+          <br/>
+          <Button className="idButton" bsStyle="success" disabled={isLoading}
+          onClick={!isLoading ? this.proveId : null} > get receipts! </Button>
         </Well>
-        <Button className="idButton" bsStyle="success" disabled={isLoading}
-        onClick={!isLoading ? this.proveId : null} > get receipts! </Button>
-
         <Panel id="collapsible-panel-example-1" expanded={ this.state.open } onToggle>
           <Panel.Collapse>
             <Panel.Body>

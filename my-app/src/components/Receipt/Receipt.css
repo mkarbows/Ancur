@@ -7,14 +7,13 @@
 }
 
 .idInputWell {
-  height: 70px;
+  height: 100px;
 }
 
-.receiptWell {
-  height: auto;
-}
 .receiptNav {
-  /* text-align: -webkit-center;
-  justify-content: center; */
   display: inline-block;
+}
+
+.idButton {
+  margin-top: 10px;
 }
