@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Well, Tab, Row, Nav, NavItem, Panel,ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Button, Well, Tab, Row, Nav, NavItem, Panel, Label } from 'react-bootstrap';
 import './Receipt.css';
 
 
@@ -8,43 +8,53 @@ class Receipt extends Component {
     super(props);
     this.state = {
       id: '',
-      open: false
+      open: false,
+      isLoading: false
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.enterId = this.enterId.bind(this);
+    this.handleIdInput = this.handleIdInput.bind(this);
+    this.proveId = this.proveId.bind(this);
     // this.displayResults = this.displayResults.bind(this);
+    // this.handleDisplay = this.handleDisplay.bind(this);
   }
 
-  handleChange(event) {
+  handleIdInput(event) {
     this.setState({
       id: event.target.value
     });
   }
 
-  enterId() {
+  proveId() {
     let id = this.state.id;
     console.log(id);
+    this.setState({ isLoading: true });
+
     this.props.actions.proveReceipt(id);
     this.props.actions.getReceipts(id);
-    this.setState({
-      open: !this.state.open
-    });
-    if(this.props.isValid !== '') {
-      // this.setState({ open: !this.state.open });
-    }
+
+    setTimeout(() => {
+      this.setState({ isLoading: false, open: !this.state.open });
+    }, 2000);
+
+    // this.setState({
+    //   open: !this.state.open
+    // });
+    // if(this.props.isValid !== '') {
+    //   this.setState({ open: !this.state.open });
+    // }
   }
 
 
   render() {
+    const { isLoading } = this.state;
     return (
       <div className="receiptComponent">
         <Well className='idInputWell'>
-          <input className="idInput" type="text" placeholder="Enter Id" onChange={ this.handleChange }></input>
+          <input className="idInput" type="text" placeholder="Enter Id" onChange={ this.handleIdInput }></input>
         </Well>
-        <Button className="idButton" bsStyle="success" onClick={ this.enterId }> get receipts! </Button>
+        <Button className="idButton" bsStyle="success" disabled={isLoading}
+        onClick={!isLoading ? this.proveId : null} > get receipts! </Button>
 
-
-        <Panel id="collapsible-panel-example-1" expanded={this.state.open} onToggle>
+        <Panel id="collapsible-panel-example-1" expanded={ this.state.open } onToggle>
           <Panel.Collapse>
             <Panel.Body>
               <Well>
@@ -60,20 +70,32 @@ class Receipt extends Component {
 
                   <Tab.Content animation>
                     <Tab.Pane eventKey="btc">
-                      <ListGroup>
-                        <ListGroupItem header="Stamp Id: ">{ this.props.stampId }</ListGroupItem>
-                        <ListGroupItem header="Stamp Hash: ">{ this.props.stampHash }</ListGroupItem>
-                        <ListGroupItem header="BTC Merkle Root: ">{ this.props.btcMerkleRoot }</ListGroupItem>
-                        <ListGroupItem header="BTC Anchor: ">{ this.props.btcAnchor }</ListGroupItem>
-                      </ListGroup>
+                      <Row>
+                        <Label>Stamp Id:</Label>{" "+ this.props.stampId }
+                      </Row>
+                      <Row>
+                        <Label>Stamp Hash:</Label>{" "+ this.props.stampHash }
+                      </Row>
+                      <Row>
+                        <Label>BTC Merkle Root:</Label>{" "+ this.props.btcMerkleRoot }
+                      </Row>
+                      <Row>
+                        <Label>BTC Anchor:</Label>{" "+ this.props.btcAnchor }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="eth">
-                      <ListGroup>
-                        <ListGroupItem header="Stamp Id: ">{ this.props.stampId }</ListGroupItem>
-                        <ListGroupItem header="Stamp Hash: ">{ this.props.stampHash }</ListGroupItem>
-                        <ListGroupItem header="ETH Merkle Root: ">{ this.props.ethMerkleRoot }</ListGroupItem>
-                        <ListGroupItem header="ETH Anchor: ">{ this.props.ethAnchor }</ListGroupItem>
-                      </ListGroup>
+                      <Row>
+                        <Label>Stamp Id:</Label>{" "+ this.props.stampId }
+                      </Row>
+                      <Row>
+                        <Label>Stamp Hash:</Label>{" "+ this.props.stampHash }
+                      </Row>
+                      <Row>
+                        <Label>ETH Merkle Root:</Label>{" "+ this.props.ethMerkleRoot }
+                      </Row>
+                      <Row>
+                        <Label>ETH Anchor:</Label>{" "+ this.props.ethAnchor }
+                      </Row>
                   </Tab.Pane>
                   </Tab.Content>
                 </Row>
