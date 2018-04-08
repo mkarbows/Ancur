@@ -6,7 +6,9 @@ class Stamp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      document: null
+      documentSize: null,
+      documentName: null,
+      lastModified: null
     };
     this.getInput = this.getInput.bind(this);
     this.stampingDocument = this.stampingDocument.bind(this);
@@ -14,12 +16,19 @@ class Stamp extends Component {
 
   getInput(event) {
     this.setState({
-      document: event.target.files[0]
+      documentSize: event.target.files[0].size,
+      documentName: event.target.files[0].name,
+      lastModified: event.target.files[0].lastModified
     });
+    // console.log(this.state.document);
   }
 
   stampingDocument(event) {
-    this.props.actions.stampDoc(this.state.document);
+    // console.log(this.state.documentSize);
+    // console.log(this.state.documentName);
+    // console.log(this.state.lastModified);
+
+    this.props.actions.stampDoc(this.state.documentSize + this.state.documentName + this.state.lastModified);
   }
 
   render() {
@@ -27,7 +36,7 @@ class Stamp extends Component {
     return (
       <div className="stampComponent">
         <Well className="stampInputWell">
-          <input className="fileInput" type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={this.getInput} />
+          <input className="fileInput" type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={ this.getInput } />
         </Well>
 
         <Button bsStyle="info" onClick={ this.stampingDocument }> stamp this! </Button>
