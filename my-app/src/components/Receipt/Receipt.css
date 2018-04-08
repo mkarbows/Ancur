@@ -13,3 +13,8 @@
 .receiptWell {
   height: auto;
 }
+.receiptNav {
+  /* text-align: -webkit-center;
+  justify-content: center; */
+  display: inline-block;
+}

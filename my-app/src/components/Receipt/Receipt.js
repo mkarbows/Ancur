@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Well, Tab, Row, Col, Nav, NavItem, Panel } from 'react-bootstrap';
+import { Button, Well, Tab, Row, Nav, NavItem, Panel,ListGroup, ListGroupItem } from 'react-bootstrap';
 import './Receipt.css';
 
 
@@ -26,7 +26,9 @@ class Receipt extends Component {
     console.log(id);
     this.props.actions.proveReceipt(id);
     this.props.actions.getReceipts(id);
-    this.setState({ open: !this.state.open });
+    this.setState({
+      open: !this.state.open
+    });
     if(this.props.isValid !== '') {
       // this.setState({ open: !this.state.open });
     }
@@ -45,25 +47,35 @@ class Receipt extends Component {
         <Panel id="collapsible-panel-example-1" expanded={this.state.open} onToggle>
           <Panel.Collapse>
             <Panel.Body>
-              yo
               <Well>
                 { this.props.isValid }
               </Well>
 
-              <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                <Row className="clearfix">
-                  <Col sm={4}>
-                    <Nav bsStyle="pills" stacked>
-                      <NavItem eventKey="first">BTC Receipt</NavItem>
-                      <NavItem eventKey="second">ETH Receipt</NavItem>
-                    </Nav>
-                  </Col>
-                  <Col sm={8}>
-                    <Tab.Content animation>
-                      <Tab.Pane eventKey="first">{ this.props.btcReceipt }</Tab.Pane>
-                      <Tab.Pane eventKey="second">{ this.props.ethReceipt }</Tab.Pane>
-                    </Tab.Content>
-                  </Col>
+              <Tab.Container id="left-tabs-example" defaultActiveKey="btc">
+                <Row >
+                  <Nav className="receiptNav" bsStyle="pills">
+                    <NavItem eventKey="btc">BTC Receipt</NavItem>
+                    <NavItem eventKey="eth">ETH Receipt</NavItem>
+                  </Nav>
+
+                  <Tab.Content animation>
+                    <Tab.Pane eventKey="btc">
+                      <ListGroup>
+                        <ListGroupItem header="Stamp Id: ">{ this.props.stampId }</ListGroupItem>
+                        <ListGroupItem header="Stamp Hash: ">{ this.props.stampHash }</ListGroupItem>
+                        <ListGroupItem header="BTC Merkle Root: ">{ this.props.btcMerkleRoot }</ListGroupItem>
+                        <ListGroupItem header="BTC Anchor: ">{ this.props.btcAnchor }</ListGroupItem>
+                      </ListGroup>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="eth">
+                      <ListGroup>
+                        <ListGroupItem header="Stamp Id: ">{ this.props.stampId }</ListGroupItem>
+                        <ListGroupItem header="Stamp Hash: ">{ this.props.stampHash }</ListGroupItem>
+                        <ListGroupItem header="ETH Merkle Root: ">{ this.props.ethMerkleRoot }</ListGroupItem>
+                        <ListGroupItem header="ETH Anchor: ">{ this.props.ethAnchor }</ListGroupItem>
+                      </ListGroup>
+                  </Tab.Pane>
+                  </Tab.Content>
                 </Row>
               </Tab.Container>
 
