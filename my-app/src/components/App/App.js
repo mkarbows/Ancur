@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 import { Grid, Col, Row } from 'react-bootstrap';
 import Stamp from '../../containers/StampContainer';
 import Receipt from '../../containers/ReceiptContainer';
@@ -9,11 +11,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 class App extends Component {
 
   render() {
+    const { className, ...props } = this.props;
+    // className="App"
     return (
-      <div className="App" >
+      <div className={classnames('App', className)} {...props} >
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
+
+        <Link to='about'><button> Test Routing </button></Link>
 
         <Grid >
           <Row >
