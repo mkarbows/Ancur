@@ -19,7 +19,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
 
-        <Link to='about'><button> Test Routing </button></Link>
+        <Link to='/'><button> Test Routing </button></Link>
 
         <Grid >
           <Row >
