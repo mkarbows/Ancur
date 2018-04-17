@@ -19,8 +19,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
 
-        <Link to='/'><button> Test Routing </button></Link>
-
         <Grid >
           <Row >
             <Col md={6}>
@@ -31,6 +29,8 @@ class App extends Component {
             </Col>
           </Row>
         </Grid>
+
+        <Link to='/'>About Ancur</Link>
 
       </div>
     );
