@@ -5,6 +5,14 @@
   margin-bottom: 0px;
   margin-top: 0px;
 }
-.stamp-info-body {
+.stamp-info-body,
+.receipt-info-body {
   text-align: left;
+}
+.jumbotron {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.main-about {
+  padding-top: 0px;
 }

@@ -13,7 +13,7 @@ export default class About extends Component {
     return (
       <div className={classnames('About', className)} {...props}>
         <div className="About-header">
-          <Jumbotron>
+          <Jumbotron className="jumbotron">
             <h1 className="About-header-text">
               What is
             </h1>
@@ -24,7 +24,7 @@ export default class About extends Component {
         <Grid>
           <Col md={12} >
             <Panel bsStyle="warning">
-              <Panel.Body>
+              <Panel.Body className="main-about">
                 <h3>
                   Ancur is a <em><b>blockchain-powered timestamping and certification platform</b></em> allowing you to <em><b>prove the existence, integrity and ownership</b></em> of all your documents.
                 </h3>
@@ -43,7 +43,7 @@ export default class About extends Component {
                 <Panel.Body className="stamp-info-body">
                   <ul>
                     <li>Use Ancur to embed unique hashes of your document into the Ethereum and Bitcoin blockchains.</li>
-                    <li>Ancur's stamping feature will give you a receipt containing all the necessary data to prove the existence and integrity of your stamped document:  </li>
+                    <li>Ancur's <em><b>stamping</b></em> feature will give you a <em><b>receipt</b></em> containing all the necessary data to prove the existence and integrity of your <em><b>stamped</b></em> document:  </li>
                       <ul>
                         <li> Stamp Id </li>
                         <li> Stamp Hash </li>
@@ -57,9 +57,27 @@ export default class About extends Component {
             <Col md={6} >
               <Panel bsStyle="success">
                 <Panel.Heading>
-                  <Panel.Title componentClass="h3">What is <em><b>proving</b></em> a <em><b>receipt</b></em> ?</Panel.Title>
+                  <Panel.Title componentClass="h3">What does it mean to <em><b>prove</b></em> a <em><b>receipt</b></em> ?</Panel.Title>
                 </Panel.Heading>
-                <Panel.Body>Panel content</Panel.Body>
+                <Panel.Body className="receipt-info-body">
+                  <ul>
+                    <li>
+                      Once you've <em><b>stamped</b></em> a document, you can <em><b>prove</b></em> that your stamped document's receipt is <em><b>valid</b></em>
+                    </li>
+                    <ul>
+                      <li>If your receipt is <em><b>valid</b></em> that means that the file from which the hash was calculated existed by the time the stamp was made</li>
+                    </ul>
+                    <li>
+                      Ancur also allows you to view your stamped document's Bitcoin and Ethereum receipts
+                    </li>
+                    <li>Each reciept will contain: </li>
+                      <ul>
+                        <li>
+                          Merkle Root
+                        </li>
+                      </ul>
+                  </ul>
+                </Panel.Body>
               </Panel>
             </Col>
           </Row>
