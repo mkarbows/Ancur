@@ -6,8 +6,10 @@
   margin-top: 0px;
 }
 .stamp-info-body,
-.receipt-info-body {
+.receipt-info-body,
+.stampery-about-list {
   text-align: left;
+  font-size-adjust: auto;
 }
 .jumbotron {
   padding-bottom: 20px;
@@ -15,4 +17,16 @@
 }
 .main-about {
   padding-top: 0px;
+}
+.stampery-logo {
+  /* justify-content: center; */
+  width: 250px;
+  padding-bottom: 15px;
+}
+.stampery-usage {
+  width: 700px;
+  padding-bottom: 15px;
+}
+.stampery-about-list {
+  padding-right: 40px;
 }

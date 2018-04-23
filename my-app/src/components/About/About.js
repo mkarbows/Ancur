@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Grid, Col, Row, Jumbotron, Panel } from 'react-bootstrap';
 import classnames from 'classnames';
 import logo from '../../images/ancur-logo.png';
+import stamperyLogo from '../../images/stampery.png';
+import stamperyUsage from '../../images/stampery-usage.png';
 
 import './style.css';
 
@@ -21,7 +23,7 @@ export default class About extends Component {
           </Jumbotron>
         </div>
 
-        <Grid>
+        <Grid >
           <Col md={12} >
             <Panel bsStyle="warning">
               <Panel.Body className="main-about">
@@ -72,15 +74,39 @@ export default class About extends Component {
                     </li>
                     <li>Each reciept will contain: </li>
                       <ul>
-                        <li>
-                          Merkle Root
-                        </li>
+                        <li>Stamp Id</li>
+                        <li>Stamp Hash</li>
+                        <li>Merkle Root</li>
+                        <li>Bitcoin and Ethereum Anchors</li>
                       </ul>
                   </ul>
                 </Panel.Body>
               </Panel>
             </Col>
           </Row>
+          <Col md={12} className="stampery-about">
+            <Panel bsStyle="warning">
+              <Panel.Heading>
+                <Panel.Title componentClass="h3">Stampery's BTA Technology</Panel.Title>
+              </Panel.Heading>
+              <Panel.Body >
+                <a href="https://stampery.com/api">
+                  <img src={stamperyUsage} alt="stampery-usage" className="stampery-usage"/>
+                </a>
+                <ul className="stampery-about-list">
+                  <li>Each stamp connects every single stamped hash to a transaction contained in the next Ethereum and Bitcoin block.</li>
+                  <li>This means that Ethereum receipts take ~30 seconds in average to be generated, while Bitcoin ones take ~5 minutes.</li>
+                  <li>Stampery's BTA technology aggregates all hashes received between one transaction and the next one by putting them inside a Merkle tree and then broadcasting the result of the aggregation—the Merkle root.</li>
+                  <li>This allows Stampery to include millions of hashes in every transaction at a fraction of the cost and without loosing the immutabiity properties of public blockchains.</li>
+                  <li>The proofs themselves contain only a few auxiliar hashes that when concurrently hashed together with your stamped hash, allow anyone to reconstruct the state of the Merkle tree at the very exact point in time when the stamping took place.</li>
+                </ul>
+                <a href="https://stampery.com/api">
+                  <img src={stamperyLogo} alt="stampery-logo" className="stampery-logo"/>
+                </a>
+              </Panel.Body>
+            </Panel>
+          </Col>
+
         </Grid>
 
         <div>
