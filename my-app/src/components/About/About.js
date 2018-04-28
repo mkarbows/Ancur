@@ -1,13 +1,13 @@
 // src/components/About/index.js
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Col, Row, Jumbotron, Panel } from 'react-bootstrap';
+import { Grid, Col, Row, Jumbotron, Panel, Button } from 'react-bootstrap';
 import classnames from 'classnames';
 import logo from '../../images/ancur-logo.png';
 import stamperyLogo from '../../images/stampery.png';
 import stamperyUsage from '../../images/stampery-usage.png';
 
-import './style.css';
+import './About.css';
 
 export default class About extends Component {
   render() {
@@ -95,7 +95,7 @@ export default class About extends Component {
                 </a>
                 <ul className="stampery-about-list">
                   <li>Each stamp connects every single stamped hash to a transaction contained in the next Ethereum and Bitcoin block.</li>
-                  <li>This means that Ethereum receipts take ~30 seconds in average to be generated, while Bitcoin ones take ~5 minutes.</li>
+                  <li>This means that Ethereum receipts take ~30 seconds on average to be generated, while Bitcoin takes ~5 minutes.</li>
                   <li>Stampery's BTA technology aggregates all hashes received between one transaction and the next one by putting them inside a Merkle tree and then broadcasting the result of the aggregation—the Merkle root.</li>
                   <li>This allows Stampery to include millions of hashes in every transaction at a fraction of the cost and without loosing the immutabiity properties of public blockchains.</li>
                   <li>The proofs themselves contain only a few auxiliar hashes that when concurrently hashed together with your stamped hash, allow anyone to reconstruct the state of the Merkle tree at the very exact point in time when the stamping took place.</li>
@@ -109,12 +109,9 @@ export default class About extends Component {
 
         </Grid>
 
-        <div>
-          <Link to='ancur'><button> Let's see it! </button></Link>
+        <div className="homepage-button">
+          <Link to='ancur'><Button bsStyle="warning"> Let's see it! </Button></Link>
         </div>
-
-
-
 
       </div>
     );

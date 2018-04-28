@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Well, Tab, Row, Nav, NavItem, Panel, Label } from 'react-bootstrap';
+import validreceipttext from '../../images/validreceipttext.png';
 import './Receipt.css';
 
 
@@ -40,6 +41,7 @@ class Receipt extends Component {
     const { isLoading } = this.state;
     return (
       <div className="receiptComponent">
+        <img src={validreceipttext} alt="validreceipttext" className="validreceipttext"/>
         <Well className='idInputWell'>
           <input className="idInput" type="text" placeholder="Enter Id" onChange={ this.handleIdInput }></input>
           <br/>

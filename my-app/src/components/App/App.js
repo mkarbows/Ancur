@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
-import { Grid, Col, Row } from 'react-bootstrap';
+import { Grid, Col, Row, Button } from 'react-bootstrap';
 import Stamp from '../../containers/StampContainer';
 import Receipt from '../../containers/ReceiptContainer';
 import logo from '../../images/ancur-logo.png';
-import './style.css';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
@@ -29,8 +29,10 @@ class App extends Component {
             </Col>
           </Row>
         </Grid>
+        <div className="footer">
+          <Link to='/'><Button bsStyle="warning"> What is Ancur </Button></Link>
+        </div>
 
-        <Link to='/'>About Ancur</Link>
 
       </div>
     );

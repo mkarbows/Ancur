@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Well, Row, Panel, Label } from 'react-bootstrap';
+import stampdocstext from '../../images/stampdocstext.png';
 import './Stamp.css';
 
 class Stamp extends Component {
@@ -32,7 +33,7 @@ class Stamp extends Component {
     this.props.actions.stampDoc(this.state.documentSize + this.state.documentName + this.state.lastModified);
 
     setTimeout(() => {
-      this.setState({ isLoading: false, open: !this.state.open });
+      this.setState({ isLoading: false, open: true });
     }, 2000);
   }
 
@@ -40,6 +41,7 @@ class Stamp extends Component {
     const { isLoading } = this.state;
     return (
       <div className="stampComponent">
+        <img src={stampdocstext} alt="stampdocstext" className="stampdocstext"/>
         <Well className="stampInputWell">
           <input className="fileInput" type='file' label='Upload' accept='.txt, .pdf, .pages, .doc, .docx' onChange={ this.getInput } />
 
