@@ -20,7 +20,6 @@ export const stampDoc = (input) => {
     axios.get(`/api/callStampMethod/` + input)
       .then(res => dispatch(stampDocResults(res)))
       .catch(err => dispatch(stampDocError(err)))
-
   }
 }
 
@@ -36,7 +35,6 @@ export const PROVE_RECEIPT_ERROR = "PROVE_RECEIPT_ERROR";
 export const proveReceiptError = (data) => {
   return { type: PROVE_RECEIPT_ERROR, data }
 }
-// JSON.stringify(res.data)
 export const PROVE_RECEIPT = "PROVE_RECEIPT";
 export const proveReceipt = (id) => {
   return dispatch => {
@@ -44,7 +42,6 @@ export const proveReceipt = (id) => {
     axios.get(`/api/callProvingMethod/` + id )
       .then(res => dispatch(proveReceiptResults(res.data)))
       .catch(err => dispatch(proveReceiptError(err)))
-
   }
 }
 
@@ -60,7 +57,6 @@ export const GET_RECEIPTS_ERROR = "GET_RECEIPTS_ERROR";
 export const getReceiptsError = (data) => {
   return { type: GET_RECEIPTS_ERROR, data }
 }
-// JSON.stringify(res.data)
 export const GET_RECEIPTS = "GET_RECEIPTS";
 export const getReceipts = (id) => {
   return dispatch => {
@@ -68,6 +64,5 @@ export const getReceipts = (id) => {
     axios.get(`/api/getReceipts/` + id )
       .then(res => dispatch(getReceiptsResults(res.data)))
       .catch(err => dispatch(getReceiptsError(err)))
-
   }
 }

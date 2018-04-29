@@ -8,5 +8,4 @@ api
   .use('/callStampMethod', callStampMethod)
   .use('/callProvingMethod', callProvingMethod)
   .use('/getReceipts', getReceipts)
-// No routes matched? 404.
 api.use((req, res) => res.status(404).end())

@@ -1,4 +1,3 @@
-// src/components/About/index.js
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Col, Row, Jumbotron, Panel, Button } from 'react-bootstrap';

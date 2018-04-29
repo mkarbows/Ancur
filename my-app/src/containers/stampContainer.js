@@ -6,7 +6,6 @@ import Stamp from '../components/Stamp/Stamp.js'
 
 function mapStateToProps(state) {
   return {
-    // results: state.reducers.results,
     newStampId: state.reducers.newStampId,
     newStampHash: state.reducers.newStampHash,
     newStampToken: state.reducers.newStampToken,

@@ -12,10 +12,8 @@ function mapStateToProps(state) {
     stampHash: state.reducers.stampHash,
     btcMerkleRoot: state.reducers.btcMerkleRoot,
     ethMerkleRoot: state.reducers.ethMerkleRoot,
-    btcAnchor: state.reducers.btcAnchor,
     btcAnchorId: state.reducers.btcAnchorId,
     btcAnchorType: state.reducers.btcAnchorType,
-    ethAnchor: state.reducers.ethAnchor,
     ethAnchorId: state.reducers.ethAnchorId,
     ethAnchorType: state.reducers.ethAnchorType
   }
