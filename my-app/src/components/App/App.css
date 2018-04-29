@@ -28,9 +28,10 @@
   text-align: -webkit-center;
 }
 .footer {
-  position: fixed;
-  left: 0;
+  position: relative;
+  right: 0;
   bottom: 0;
+  left: 0;
   padding-bottom: 30px;
   width: 100%;
   text-align: center;

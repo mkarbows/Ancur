@@ -29,6 +29,8 @@ class App extends Component {
             </Col>
           </Row>
         </Grid>
+
+
         <div className="footer">
           <Link to='/'><Button bsStyle="warning"> What is Ancur </Button></Link>
         </div>
