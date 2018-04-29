@@ -1,5 +1,4 @@
 .stampComponent {
-  /* justify-content: -webkit-center; */
   text-align: -webkit-center;
 }
 
@@ -13,4 +12,8 @@
 .stampdocstext {
   height: 40px;
   padding-bottom: 10px;
+}
+.stampContent {
+  text-align: left;
+  word-wrap: break-word;
 }

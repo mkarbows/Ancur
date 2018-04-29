@@ -21,3 +21,8 @@
   height: 40px;
   padding-bottom: 10px;
 }
+.receiptContent {
+  text-align: left;
+  margin-left: 10px;
+  word-wrap: break-word;
+}

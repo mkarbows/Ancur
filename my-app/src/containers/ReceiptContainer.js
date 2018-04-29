@@ -6,16 +6,14 @@ import Receipt from '../components/Receipt/Receipt.js'
 
 function mapStateToProps(state) {
   return {
-    // receiptResults: state.reducers.receiptResults,
-    // ethReceipt: state.reducers.ethReceipt,
-    // btcReceipt: state.reducers.btcReceipt,
+    error: state.reducers.error,
     isValid: state.reducers.isValid,
     stampId: state.reducers.stampId,
     stampHash: state.reducers.stampHash,
     btcMerkleRoot: state.reducers.btcMerkleRoot,
     ethMerkleRoot: state.reducers.ethMerkleRoot,
     btcAnchor: state.reducers.btcAnchor,
-    ethAnchor: state.reducers.ethAnchor
+    ethAnchor: state.reducers.ethAnchor,
   }
 }
 

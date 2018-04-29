@@ -7,11 +7,13 @@ router.get('/:id', function(req, res, next) {
   var stampery = new Stampery('342463c4-3cbe-4d63-b1fe-48d7a9c13c3d');
   // console.log(req.params.id);
   stampery.getById(req.params.id).then((stamp) => {
-    console.log(stamp[0].receipts.btc);
+    // console.log(stamp[0]);
+    // console.log(stamp[0].receipts.btc);
     res.status(200).send(stamp[0]);
     // res.status(200).send(stamp[0].receipts.eth);
     // res.status(200).send(stamp[0].receipts.btc);
   }).catch((err) => {
+    res.status(200).send(err);
     return console.error(err);
   });
 

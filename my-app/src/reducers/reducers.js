@@ -5,10 +5,7 @@ import {
 } from '../actions/actions.js';
 
 const initialState = {
-  // results: '',
-  // receiptResults: '',
-  // btcReceipt: '',
-  // ethReceipt: '',
+  error: '',
   newStampId: '',
   newStampHash: '',
   newStampToken: '',
@@ -27,8 +24,7 @@ const initialState = {
 const reducers = (state = initialState, action) => {
   switch (action.type) {
     case STAMP_DOC_RESULTS:
-      return { ...state, /*results: "Token:  " +
-        action.data.data.token + "  Id:  " + action.data.data.id + "  Hash:  " + action.data.data.hash*/
+      return { ...state,
         newStampId: action.data.data.id,
         newStampHash: action.data.data.hash,
         newStampToken: action.data.data.token,
@@ -37,7 +33,7 @@ const reducers = (state = initialState, action) => {
         newStampEthTime: action.data.data.receipts.eth
       }
     case PROVE_RECEIPT_RESULTS:
-      return { ...state, isValid: "Yes! Valid on the Bitcoin block! " + action.data }
+      return { ...state, isValid: "Yes! Valid on the Bitcoin block! " + action.data, error: action.data }
     case GET_RECEIPTS_RESULTS:
       return { ...state,
         stampId: action.data.id,

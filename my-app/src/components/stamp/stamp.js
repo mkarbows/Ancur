@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Well, Row, Panel, Label } from 'react-bootstrap';
+import { Button, Well, Row, Panel, Label, Col } from 'react-bootstrap';
 import stampdocstext from '../../images/stampdocstext.png';
 import './Stamp.css';
 
@@ -49,27 +49,33 @@ class Stamp extends Component {
           <Button bsStyle="info" className="stampButton"
           onClick={!isLoading ? this.stampingDocument : null} disabled={!this.state.documentName || isLoading}> stamp this! </Button>
         </Well>
-        <Panel id="collapsible-panel-example-1" expanded={ this.state.open } onToggle>
+        <Panel expanded={ this.state.open } onToggle>
           <Panel.Collapse>
             <Panel.Body>
-              <Row>
-                <Label>Stamp Id:</Label>{" "+ this.props.newStampId }
-              </Row>
-              <Row>
-                <Label>Stamp Hash:</Label>{" "+ this.props.newStampHash }
-              </Row>
-              <Row>
-                <Label>Stamp Token:</Label>{" "+ this.props.newStampToken }
-              </Row>
-              <Row>
-                <Label>Time:</Label>{" "+ this.props.newStampTime }
-              </Row>
-              <Row>
-                <Label>Estimated BTC Time:</Label>{" ~"+ btcEstTime + " minutes" }
-              </Row>
-              <Row>
-                <Label>Estimated ETH Time:</Label>{" ~"+ ethEstTime + " minutes" }
-              </Row>
+              <Col md={12} className="stampContent">
+                <Row>
+                  <Label>Stamp Id:</Label>
+                  <br/>{" "+ this.props.newStampId }
+                </Row>
+                <Row>
+                  <Label>Stamp Hash:</Label>{" "+ this.props.newStampHash }
+                </Row>
+                <Row>
+                  <Label>Stamp Token:</Label>{" "+ this.props.newStampToken }
+                </Row>
+                <Row>
+                  <Label>Time:</Label>
+                  <br/>{" "+ this.props.newStampTime }
+                </Row>
+                <Row>
+                  <Label>Estimated BTC Time:</Label>
+                  <br/>{" ~"+ btcEstTime + " minutes" }
+                </Row>
+                <Row>
+                  <Label>Estimated ETH Time:</Label>
+                  <br/>{" ~"+ ethEstTime + " minutes" }
+                </Row>
+              </Col>
             </Panel.Body>
           </Panel.Collapse>
         </Panel>
