@@ -31,7 +31,7 @@ class Receipt extends Component {
     this.props.actions.getReceipts(id);
 
     setTimeout(() => {
-      this.setState({ isLoading: false, open: !this.state.open });
+      this.setState({ isLoading: false, open: true });
     }, 2000);
 
   }
