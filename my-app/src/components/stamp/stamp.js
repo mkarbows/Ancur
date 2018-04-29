@@ -49,9 +49,12 @@ class Stamp extends Component {
           <Button bsStyle="info" className="stampButton"
           onClick={!isLoading ? this.stampingDocument : null} disabled={!this.state.documentName || isLoading}> stamp this! </Button>
         </Well>
-        <Panel expanded={ this.state.open } onToggle>
+        <Panel id="collapsible-panel-example-1" expanded={ this.state.open } onToggle>
           <Panel.Collapse>
             <Panel.Body>
+              <Well>
+                Save this information somewhere safe so you can confirm the validity of your receipts and view them later!
+              </Well>
               <Col md={12} className="stampContent">
                 <Row>
                   <Label>Stamp Id:</Label>

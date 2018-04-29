@@ -18,7 +18,11 @@ const initialState = {
   btcMerkleRoot: '',
   ethMerkleRoot: '',
   btcAnchor: '',
-  ethAnchor: ''
+  ethAnchor: '',
+  btcAnchorId: '',
+  btcAnchorType: '',
+  ethAnchorId: '',
+  ethAnchorType: ''
 }
 
 const reducers = (state = initialState, action) => {
@@ -40,8 +44,12 @@ const reducers = (state = initialState, action) => {
         stampHash: action.data.hash,
         btcMerkleRoot: action.data.receipts.btc.merkleRoot,
         btcAnchor: JSON.stringify(action.data.receipts.btc.anchors[0]),
+        btcAnchorId: action.data.receipts.btc.anchors[0].sourceId,
+        btcAnchorType: action.data.receipts.btc.anchors[0].type,
         ethMerkleRoot: action.data.receipts.eth.merkleRoot,
-        ethAnchor: JSON.stringify(action.data.receipts.eth.anchors[0])
+        ethAnchor: JSON.stringify(action.data.receipts.eth.anchors[0]),
+        ethAnchorId: action.data.receipts.eth.anchors[0].sourceId,
+        ethAnchorType: action.data.receipts.eth.anchors[0].type,
       }
     default:
       return state

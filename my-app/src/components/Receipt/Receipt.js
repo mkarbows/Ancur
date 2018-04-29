@@ -3,7 +3,6 @@ import { Button, Well, Tab, Row, Nav, NavItem, Panel, Label, Col } from 'react-b
 import validreceipttext from '../../images/validreceipttext.png';
 import './Receipt.css';
 
-
 class Receipt extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +23,6 @@ class Receipt extends Component {
 
   proveId() {
     let id = this.state.id;
-    // console.log(id);
     this.setState({ isLoading: true });
 
     this.props.actions.proveReceipt(id);
@@ -33,16 +31,14 @@ class Receipt extends Component {
     setTimeout(() => {
       console.log(this.props.error);
       if(this.props.error !== true) {
-        // console.log('hi');
         this.setState({ isLoading: false});
-        alert("Looks like something went wrong or there are no receipts associated with that id... Give it a go one more time!");
+        alert("Looks like something went wrong or there are no receipts associated with the id you entered... Give it a go one more time!");
       } else {
         this.setState({ isLoading: false, open: true });
       }
     }, 2000);
 
   }
-
 
   render() {
     const { isLoading } = this.state;
@@ -55,6 +51,7 @@ class Receipt extends Component {
           <Button className="idButton" bsStyle="success" disabled={isLoading || !this.state.id}
           onClick={!isLoading ? this.proveId : null} > get receipts! </Button>
         </Well>
+
         <Panel id="collapsible-panel-example-1" expanded={ this.state.open } onToggle>
           <Panel.Collapse>
             <Panel.Body>
@@ -62,7 +59,7 @@ class Receipt extends Component {
                 { this.props.isValid }
               </Well>
 
-              <Tab.Container defaultActiveKey="btc">
+              <Tab.Container id="left-tabs-example" defaultActiveKey="btc">
                 <Row >
                   <Nav className="receiptNav" bsStyle="pills">
                     <NavItem eventKey="btc">BTC Receipt</NavItem>
@@ -83,7 +80,11 @@ class Receipt extends Component {
                           <Label>BTC Merkle Root:</Label>{" "+ this.props.btcMerkleRoot }
                         </Row>
                         <Row>
-                          <Label>BTC Anchor:</Label>{" "+ this.props.btcAnchor }
+                          <Label>BTC Anchor Source Id:</Label>{" "+ this.props.btcAnchorId }
+                        </Row>
+                        <Row>
+                          <Label>BTC Anchor Type:</Label>
+                          <br/>{" "+ this.props.btcAnchorType }
                         </Row>
                       </Col>
                     </Tab.Pane>
@@ -100,7 +101,11 @@ class Receipt extends Component {
                           <Label>ETH Merkle Root:</Label>{" "+ this.props.ethMerkleRoot }
                         </Row>
                         <Row>
-                          <Label>ETH Anchor:</Label>{" "+ this.props.ethAnchor }
+                          <Label>ETH Anchor Source Id:</Label>{" "+ this.props.ethAnchorId }
+                        </Row>
+                        <Row>
+                          <Label>ETH Anchor Type:</Label>
+                          <br/>{" "+ this.props.ethAnchorType }
                         </Row>
                       </Col>
                     </Tab.Pane>

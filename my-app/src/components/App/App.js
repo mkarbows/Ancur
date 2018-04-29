@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { Grid, Col, Row, Button } from 'react-bootstrap';
 import Stamp from '../../containers/StampContainer';
@@ -11,8 +10,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 class App extends Component {
 
   render() {
-    // const { className, ...props } = this.props;
-    // className="App"
     return (
       <div className='App'>
         <div className="App-header">
@@ -30,12 +27,9 @@ class App extends Component {
           </Row>
         </Grid>
 
-
         <div className="footer">
           <Link to='/'><Button bsStyle="warning"> What is Ancur </Button></Link>
         </div>
-
-
       </div>
     );
   }
