@@ -62,7 +62,7 @@ class Receipt extends Component {
                 { this.props.isValid }
               </Well>
 
-              <Tab.Container id="left-tabs-example" defaultActiveKey="btc">
+              <Tab.Container defaultActiveKey="btc">
                 <Row >
                   <Nav className="receiptNav" bsStyle="pills">
                     <NavItem eventKey="btc">BTC Receipt</NavItem>
@@ -71,7 +71,7 @@ class Receipt extends Component {
 
                   <Tab.Content animation>
                     <Tab.Pane eventKey="btc">
-                      <Col md={12} className="receiptContent">
+                      <Col md={11} className="receiptContent">
                         <Row>
                           <Label>Stamp Id:</Label>
                           <br/>{" "+ this.props.stampId }
@@ -88,7 +88,7 @@ class Receipt extends Component {
                       </Col>
                     </Tab.Pane>
                     <Tab.Pane eventKey="eth">
-                      <Col md={12} className="receiptContent">
+                      <Col md={11} className="receiptContent">
                         <Row>
                           <Label>Stamp Id:</Label>
                           <br/>{" "+ this.props.stampId }
