@@ -7,7 +7,7 @@
 
 
 ### Simulation
-* `Clone` this repository
+* `Clone` this repository: `https://github.com/mkarbows/Ancur.git`
 * Open `my-app` folder
 * Run `npm install`
 * Start a server with `npm start`
