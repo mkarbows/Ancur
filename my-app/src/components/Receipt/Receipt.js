@@ -29,7 +29,6 @@ class Receipt extends Component {
     this.props.actions.getReceipts(id);
 
     setTimeout(() => {
-      console.log(this.props.error);
       if(this.props.error !== true) {
         this.setState({ isLoading: false});
         alert("Looks like something went wrong or there are no receipts associated with the id you entered... Give it a go one more time!");
@@ -56,7 +55,8 @@ class Receipt extends Component {
           <Panel.Collapse>
             <Panel.Body>
               <Well>
-                { this.props.isValid }
+                <a style={{color: 'green'}}>{ this.props.isValid.toUpperCase() } !!</a><br/>
+                The document associated with the Stamp Id <b>{ this.props.stampId }</b> is <b>valid</b> on the Bitcoin blockchain!
               </Well>
 
               <Tab.Container id="left-tabs-example" defaultActiveKey="btc">

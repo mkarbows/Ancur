@@ -35,7 +35,7 @@ const reducers = (state = initialState, action) => {
         newStampEthTime: action.data.data.receipts.eth
       }
     case PROVE_RECEIPT_RESULTS:
-      return { ...state, isValid: "Yes! Valid on the Bitcoin block! " + action.data, error: action.data }
+      return { ...state, isValid: "" + action.data, error: action.data }
     case GET_RECEIPTS_RESULTS:
       return { ...state,
         stampId: action.data.id,

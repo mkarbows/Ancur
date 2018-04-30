@@ -96,8 +96,11 @@ export default class About extends Component {
                   <li>Each stamp connects every single stamped hash to a transaction contained in the next Ethereum and Bitcoin block.</li>
                   <li>This means that Ethereum receipts take ~30 seconds on average to be generated, while Bitcoin takes ~5 minutes.</li>
                   <li>Stampery's BTA technology aggregates all hashes received between one transaction and the next one by putting them inside a Merkle tree and then broadcasting the result of the aggregation—the Merkle root.</li>
-                  <li>This allows Stampery to include millions of hashes in every transaction at a fraction of the cost and without loosing the immutabiity properties of public blockchains.</li>
+                  <li>This allows Stampery to include millions of hashes in every transaction at a fraction of the cost and without losing the immutabiity properties of public blockchains.</li>
                   <li>The proofs themselves contain only a few auxiliar hashes that when concurrently hashed together with your stamped hash, allow anyone to reconstruct the state of the Merkle tree at the very exact point in time when the stamping took place.</li>
+                  <li>For more information visit
+                    <a href="https://stampery.com/api"> stampery.com</a>
+                  </li>
                 </ul>
                 <a href="https://stampery.com/api">
                   <img src={stamperyLogo} alt="stampery-logo" className="stampery-logo"/>

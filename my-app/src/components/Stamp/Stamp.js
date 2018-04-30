@@ -64,7 +64,8 @@ class Stamp extends Component {
                   <Label>Stamp Hash:</Label>{" "+ this.props.newStampHash }
                 </Row>
                 <Row>
-                  <Label>Stamp Token:</Label>{" "+ this.props.newStampToken }
+                  <Label>Stamp Token:</Label>
+                  <br/>{" "+ this.props.newStampToken }
                 </Row>
                 <Row>
                   <Label>Time:</Label>
